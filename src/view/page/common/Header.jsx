@@ -28,14 +28,6 @@ const Header = () => {
           </li>
           <li style={listItem}>
             <Link
-              to="/experience"
-              className="hover:text-orange-400 hover:ease-in duration-300"
-            >
-              Experience
-            </Link>
-          </li>
-          <li style={listItem}>
-            <Link
               to="/portfolio"
               className="hover:text-orange-400 hover:ease-in duration-300"
             >
