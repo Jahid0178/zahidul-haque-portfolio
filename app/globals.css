@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  section {
+    @apply py-10;
+  }
+}
+
+@layer components {
+  .bg-primary {
+    @apply bg-[#111223];
+  }
+
+  .text-primary {
+    @apply text-[#111223];
+  }
+
+  .text-secondary {
+    @apply text-[#8566FF];
+  }
+}
