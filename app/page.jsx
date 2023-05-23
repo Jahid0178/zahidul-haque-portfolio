@@ -7,6 +7,7 @@ import Typed from "typed.js";
 import { socialLinks } from "@/data/data";
 import IconButton from "./components/Buttons/IconButton/IconButton";
 import AboutPage from "./about/page";
+import ContactPage from "./contact/page";
 
 const HomePage = () => {
   const el = useRef(null);
@@ -65,6 +66,8 @@ const HomePage = () => {
         </div>
       </section>
       <AboutPage />
+      {/* Contact us page */}
+      <ContactPage />
     </>
   );
 };
