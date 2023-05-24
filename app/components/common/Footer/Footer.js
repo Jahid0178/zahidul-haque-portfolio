@@ -7,17 +7,17 @@ const Footer = () => {
   return (
     <footer className="py-4 bg-primary text-white">
       <div className="container">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© {new Date().getFullYear()} Zahidul Haque. All Right Reserved</p>
           <ul className="flex items-center gap-4">
             <li>
               <Link href="#">
-                <BsGithub title="Github" />
+                <BsFacebook title="Facebook" />
               </Link>
             </li>
             <li>
               <Link href="#">
-                <BsFacebook title="Facebook" />
+                <BsGithub title="Github" />
               </Link>
             </li>
             <li>

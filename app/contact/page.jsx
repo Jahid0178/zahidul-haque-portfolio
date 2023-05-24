@@ -9,11 +9,10 @@ const ContactPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div>
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              labore rerum dicta dolorum repellat. Exercitationem provident
-              laudantium sequi adipisci at.
+            <h2 className="text-2xl mb-4 md:text-4xl">Let&apos; Connect</h2>
+            <p className="text-lg">
+              Need to get in touch? You can send me a message using the contact
+              form provided. I&apos;ll get back to you as soon as possible.
             </p>
           </div>
           <div>
@@ -37,7 +36,10 @@ const ContactPage = () => {
                 placeholder="Enter your message..."
                 rows={5}
               ></textarea>
-              <input type="submit" />
+              <input
+                className="inline-block px-4 py-2 cursor-pointer bg-cyan-950 border border-cyan-500 rounded-full text-cyan-400 hover:bg-cyan-500 hover:text-black transition-colors text-base"
+                type="submit"
+              />
             </form>
           </div>
         </div>
