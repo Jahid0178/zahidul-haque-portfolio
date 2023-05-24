@@ -9,6 +9,7 @@ import IconButton from "./components/Buttons/IconButton/IconButton";
 import AboutPage from "./about/page";
 import ContactPage from "./contact/page";
 import ScrollToTop from "./components/Buttons/ScrollToTop/ScrollToTop";
+import WorksPage from "./works/page";
 
 const HomePage = () => {
   const el = useRef(null);
@@ -66,8 +67,11 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* About Me Page */}
       <AboutPage />
-      {/* Contact us page */}
+      {/* Works Page */}
+      <WorksPage />
+      {/* Contact Me Page */}
       <ContactPage />
       {/* Scroll To Top Button */}
       <span className="fixed right-4 bottom-3">

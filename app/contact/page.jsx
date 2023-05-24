@@ -9,7 +9,7 @@ const ContactPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h2 className="text-2xl mb-4 md:text-4xl">Let&apos; Connect</h2>
+            <h2 className="text-xl mb-4 md:text-4xl">Let&apos; Connect</h2>
             <p className="text-lg">
               Need to get in touch? You can send me a message using the contact
               form provided. I&apos;ll get back to you as soon as possible.
