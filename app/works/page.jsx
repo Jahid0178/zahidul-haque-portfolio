@@ -10,14 +10,13 @@ const WorksPage = () => {
         <h2 className="text-4xl">Latest Works</h2>
         <div className="mt-4">
           <Swiper
-            slidesPerView={3}
+            slidesPerView={4}
             spaceBetween={20}
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
             loop={true}
             autoplay={{
               delay: 2000,
-              disableOnInteraction: false,
             }}
             breakpoints={{
               320: {
@@ -30,10 +29,6 @@ const WorksPage = () => {
               },
               640: {
                 slidesPerView: 3,
-                spaceBetween: 40,
-              },
-              860: {
-                slidesPerView: 4,
                 spaceBetween: 40,
               },
             }}
