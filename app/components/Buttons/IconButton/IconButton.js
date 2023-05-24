@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 const IconButton = ({ title, children, href, type, ...rest }) => {
-  console.log(type);
   return (
     <>
       <Link

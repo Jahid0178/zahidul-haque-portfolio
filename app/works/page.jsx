@@ -8,7 +8,7 @@ const WorksPage = () => {
     <section>
       <div className="container">
         <h2 className="text-4xl">Latest Works</h2>
-        <div className="mt-4">
+        <div className="mt-8">
           <Swiper
             slidesPerView={4}
             spaceBetween={20}

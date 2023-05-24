@@ -10,15 +10,16 @@ import AboutPage from "./about/page";
 import ContactPage from "./contact/page";
 import ScrollToTop from "./components/Buttons/ScrollToTop/ScrollToTop";
 import WorksPage from "./works/page";
+import CareerPage from "./career/page";
 
 const HomePage = () => {
   const el = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["MERN Stack Developer", "Front End Developer."],
+      strings: ["MERN Stack Developer", "Front End Developer", "Freelancer"],
       smartBackspace: true,
-      typeSpeed: 40,
+      typeSpeed: 100,
       loop: true,
     });
     return () => {
@@ -37,7 +38,7 @@ const HomePage = () => {
                 Hi! I&apos;m Zahidul Haque
               </h4>
               <h1 className="text-4xl md:text-6xl my-4">
-                MERN Stack Developer and Digital Strategist
+                MERN Stack Developer Front End Focused
               </h1>
               <span className="text-lg" ref={el}></span>
               <div className="mt-4 flex gap-4 flex-wrap">
@@ -70,6 +71,8 @@ const HomePage = () => {
       </section>
       {/* About Me Page */}
       <AboutPage />
+      {/* Career Page */}
+      <CareerPage />
       {/* Works Page */}
       <WorksPage />
       {/* Contact Me Page */}

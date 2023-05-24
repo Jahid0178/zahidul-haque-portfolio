@@ -1,5 +1,7 @@
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
+import MabiasLogo from "/public/images/company/mabias.jpg";
+import RightbizLogo from "/public/images/company/rightbiz.jpg";
 
 export const navigationLinks = [
   {
@@ -14,13 +16,13 @@ export const navigationLinks = [
   },
   {
     id: 3,
-    title: "Work",
-    href: "/work",
+    title: "Career",
+    href: "/career",
   },
   {
     id: 4,
-    title: "Blog",
-    href: "/blog",
+    title: "Work",
+    href: "/work",
   },
   {
     id: 5,
@@ -54,5 +56,30 @@ export const socialLinks = [
     type: "mail",
     link: "zahidul.haque767@gmail.com",
     icon: <IoMdMail size={20} />,
+  },
+];
+
+export const comapnyNames = [
+  {
+    id: 1,
+    logo: MabiasLogo,
+    companyName: "Mabias",
+    roll: "Front End Developer",
+    location: "Dhaka, Bangladesh",
+    jobType: "Intern",
+    type: "Remote",
+    start: "Sep 2022",
+    end: "Mar 2023",
+  },
+  {
+    id: 2,
+    logo: RightbizLogo,
+    companyName: "Rightbiz",
+    roll: "Front End Developer",
+    location: "London, UK",
+    jobType: "Full-Time",
+    type: "Remote",
+    start: "Feb 2022",
+    end: "May 2023",
   },
 ];
