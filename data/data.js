@@ -1,4 +1,5 @@
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
+import { IoMdMail } from "react-icons/io";
 
 export const navigationLinks = [
   {
@@ -46,5 +47,12 @@ export const socialLinks = [
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/zahid767/",
     icon: <BsLinkedin size={20} />,
+  },
+  {
+    id: 4,
+    title: "Gmail",
+    type: "mail",
+    link: "zahidul.haque767@gmail.com",
+    icon: <IoMdMail size={20} />,
   },
 ];

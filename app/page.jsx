@@ -46,6 +46,7 @@ const HomePage = () => {
                     key={socialLink.id}
                     title={socialLink.title}
                     href={socialLink.link}
+                    type={socialLink.type}
                     onClick={() => console.log("clicked on social link")}
                     className="hover:bg-indigo-800 p-2 rounded-sm"
                     target="_blank"
