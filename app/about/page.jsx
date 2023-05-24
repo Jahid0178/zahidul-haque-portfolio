@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Buttons/Button/Button";
+import DownloadButton from "../components/Buttons/DownloadButton/DownloadButton";
 
 const AboutPage = () => {
   return (
@@ -14,7 +14,11 @@ const AboutPage = () => {
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
               libero vitae erat.
             </p>
-            <Button href="/">Get in touch</Button>
+            <DownloadButton
+              href={"/public/assets/pdf/Zahidul-Haque-Resume.pdf"}
+            >
+              Download CV
+            </DownloadButton>
           </div>
           <div>2</div>
         </div>
