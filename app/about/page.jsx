@@ -7,13 +7,7 @@ const AboutPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
           <div>
-            <h4 className="text-secondary text-xl tracking-widest">
-              Hi! I&apos;m Zahidul Haque
-            </h4>
-            <h2 className="text-4xl md:text-6xl my-8">
-              Delivering software solutions that are reliable, scalable, and
-              user-friendly
-            </h2>
+            <h2 className="text-4xl md:text-6xl my-8">About Me</h2>
             <p className="mb-7">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,

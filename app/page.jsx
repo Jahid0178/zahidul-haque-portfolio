@@ -8,6 +8,7 @@ import { socialLinks } from "@/data/data";
 import IconButton from "./components/Buttons/IconButton/IconButton";
 import AboutPage from "./about/page";
 import ContactPage from "./contact/page";
+import ScrollToTop from "./components/Buttons/ScrollToTop/ScrollToTop";
 
 const HomePage = () => {
   const el = useRef(null);
@@ -68,6 +69,10 @@ const HomePage = () => {
       <AboutPage />
       {/* Contact us page */}
       <ContactPage />
+      {/* Scroll To Top Button */}
+      <span className="fixed right-4 bottom-3">
+        <ScrollToTop />
+      </span>
     </>
   );
 };
