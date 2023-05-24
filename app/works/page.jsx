@@ -2,6 +2,7 @@ import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectCard from "../components/Cards/ProjectCard/ProjectCard";
 import "swiper/css/pagination";
+import { projects } from "@/data/data";
 
 const WorksPage = () => {
   return (
@@ -28,15 +29,15 @@ const WorksPage = () => {
                 spaceBetween: 30,
               },
               640: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 40,
               },
             }}
             className="mySwiper"
           >
-            {[1, 2, 3, 4, 5, 6].map((item, ind) => (
-              <SwiperSlide key={ind}>
-                <ProjectCard />
+            {projects.map((project) => (
+              <SwiperSlide key={project.id}>
+                <ProjectCard data={project} />
               </SwiperSlide>
             ))}
           </Swiper>

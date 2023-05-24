@@ -25,3 +25,14 @@
     @apply inline-block px-4 py-2 bg-cyan-950 border border-cyan-500 rounded-full text-cyan-400 hover:bg-cyan-500 hover:text-black transition-colors text-base;
   }
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
