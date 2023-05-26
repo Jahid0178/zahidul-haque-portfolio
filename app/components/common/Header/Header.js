@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="py-5 bg-primary text-white">
       <div className="container">
-        <nav className="flex justify-between items-center">
+        <nav className="flex flex-col md:justify-between md:flex-row gap-4 items-center">
           <Logo />
           <ul className="flex gap-4">
             {navigationLinks.map((navigationLink) => (
