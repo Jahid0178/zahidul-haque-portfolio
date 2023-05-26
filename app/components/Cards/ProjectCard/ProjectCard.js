@@ -1,13 +1,12 @@
 import Image from "next/image";
-import demo from "/public/images/demo.jpg";
 import Link from "next/link";
 
 const ProjectCard = ({ data }) => {
-  const { liveLink, gitLink, title, technologies } = data;
+  const { liveLink, gitLink, title, technologies, image } = data;
   return (
     <div className="bg-[#8566FF] bg-opacity-10 p-3 rounded-lg border border-indigo-500">
       <Image
-        src={demo}
+        src={image}
         alt=""
         width={500}
         height={500}

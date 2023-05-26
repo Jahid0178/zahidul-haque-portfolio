@@ -16,6 +16,12 @@ import Tailwind from "/public/images/skills/tailwind.webp";
 import GraphQL from "/public/images/skills/graphql.png";
 import MUI from "/public/images/skills/mui.png";
 
+// Projects Images
+import Mixy from "/public/images/projects/mixy.png";
+import AdminPanel from "/public/images/projects/admin.png";
+import Agro from "/public/images/projects/agro.png";
+import Gym from "/public/images/projects/gym.png";
+
 export const navigationLinks = [
   {
     id: 1,
@@ -101,6 +107,7 @@ export const projects = [
   {
     id: 1,
     title: "Agro Grocery",
+    image: Agro,
     technologies: [
       "React",
       "React Redux",
@@ -114,13 +121,15 @@ export const projects = [
   {
     id: 2,
     title: "Admin Dashboard",
-    technologies: ["React", "Syncfusion", "React Context API"],
+    image: AdminPanel,
+    technologies: ["React", "Syncfusion", "React Context API", "Tailwind"],
     liveLink: "https://glittering-crisp-db6420.netlify.app/",
     gitLink: "https://github.com/Jahid0178/Admin-Dashboard-React",
   },
   {
     id: 3,
     title: "Mixy Ecommerce",
+    image: Mixy,
     technologies: [
       "Next Js",
       "Redux",
@@ -136,6 +145,7 @@ export const projects = [
   {
     id: 4,
     title: "GYM Website",
+    image: Gym,
     technologies: ["React", "React Bootstrap", "Firebase Authentication"],
     liveLink: "https://gym-website-25129.web.app/home",
     gitLink: "https://github.com/Jahid0178/GYM",

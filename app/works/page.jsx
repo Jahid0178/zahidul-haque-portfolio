@@ -35,7 +35,7 @@ const WorksPage = () => {
                 spaceBetween: 40,
               },
             }}
-            className="mySwiper"
+            className="mySwiper py-9"
           >
             {projects.map((project) => (
               <SwiperSlide key={project.id}>
