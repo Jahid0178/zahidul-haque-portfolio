@@ -1,5 +1,8 @@
 import React from "react";
 import DownloadButton from "../components/Buttons/DownloadButton/DownloadButton";
+import Link from "next/link";
+import { skills } from "@/data/data";
+import Image from "next/image";
 
 const AboutPage = () => {
   return (
@@ -16,15 +19,7 @@ const AboutPage = () => {
               <b>+8801789293803</b> to discuss how I can assist you with your
               web development requirements!
             </p>
-            <DownloadButton
-              href={"/public/assets/pdf/Zahidul-Haque-Resume.pdf"}
-            >
-              Download CV
-            </DownloadButton>
-          </div>
-          <div>
-            <h2 className="text-4xl mb-5">Tech Stack</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
               <ul>
                 <li className="mb-3">
                   <p>
@@ -61,9 +56,34 @@ const AboutPage = () => {
                 <li className="mt-3">
                   <p>
                     <b>Github:</b>{" "}
+                    <Link href="https://github.com/Jahid0178" target="_blank">
+                      Link
+                    </Link>
                   </p>
                 </li>
               </ul>
+            </div>
+            <DownloadButton
+              href={"/public/assets/pdf/Zahidul-Haque-Resume.pdf"}
+            >
+              Download CV
+            </DownloadButton>
+          </div>
+          <div>
+            <h2 className="text-4xl mb-5">Skills</h2>
+            <div className="flex flex-wrap items-center gap-4">
+              {skills.map((skill) => (
+                <div key={skill.id}>
+                  <Image
+                    src={skill.icon}
+                    alt={skill.title}
+                    width={100}
+                    height={100}
+                    className="w-16"
+                    title={skill.title}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

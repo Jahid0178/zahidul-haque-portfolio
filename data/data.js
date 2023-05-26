@@ -3,6 +3,19 @@ import { IoMdMail } from "react-icons/io";
 import MabiasLogo from "/public/images/company/mabias.jpg";
 import RightbizLogo from "/public/images/company/rightbiz.jpg";
 
+// Skills Images
+import HTML from "/public/images/skills/html.png";
+import CSS from "/public/images/skills/css.png";
+import JavaScript from "/public/images/skills/js.png";
+import React from "/public/images/skills/react.png";
+import NodeJs from "/public/images/skills/node.png";
+import Express from "/public/images/skills/express.png";
+import MongoDb from "/public/images/skills/mongodb.png";
+import Redux from "/public/images/skills/redux.png";
+import Tailwind from "/public/images/skills/tailwind.webp";
+import GraphQL from "/public/images/skills/graphql.png";
+import MUI from "/public/images/skills/mui.png";
+
 export const navigationLinks = [
   {
     id: 1,
@@ -126,5 +139,63 @@ export const projects = [
     technologies: ["React", "React Bootstrap", "Firebase Authentication"],
     liveLink: "https://gym-website-25129.web.app/home",
     gitLink: "https://github.com/Jahid0178/GYM",
+  },
+];
+
+export const skills = [
+  {
+    id: 1,
+    icon: HTML,
+    title: "HTML",
+  },
+  {
+    id: 2,
+    icon: CSS,
+    title: "CSS",
+  },
+  {
+    id: 3,
+    icon: JavaScript,
+    title: "JavaScript",
+  },
+  {
+    id: 4,
+    icon: React,
+    title: "React",
+  },
+  {
+    id: 5,
+    icon: NodeJs,
+    title: "Node Js",
+  },
+  {
+    id: 6,
+    icon: Express,
+    title: "Express Js",
+  },
+  {
+    id: 7,
+    icon: MongoDb,
+    title: "MongoDB",
+  },
+  {
+    id: 8,
+    icon: MUI,
+    title: "MUI",
+  },
+  {
+    id: 9,
+    icon: Redux,
+    title: "Redux",
+  },
+  {
+    id: 10,
+    icon: GraphQL,
+    title: "GraphQL",
+  },
+  {
+    id: 11,
+    icon: Tailwind,
+    title: "Tailwind",
   },
 ];
