@@ -7,7 +7,7 @@ const AboutPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h2 className="text-4xl my-5">About Me</h2>
+            <h2 className="text-4xl mb-5">About Me</h2>
             <p className="mb-5">
               I&apos;m AKM Zahidul Haque, a MERN Stack Developer with 2 years of
               experience. Proficient in MongoDB, Express.js, React, Next, and
@@ -23,7 +23,48 @@ const AboutPage = () => {
             </DownloadButton>
           </div>
           <div>
-            <h2>Tech S</h2>
+            <h2 className="text-4xl mb-5">Tech Stack</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul>
+                <li className="mb-3">
+                  <p>
+                    <b>Name:</b> AKM Zahidul Haque
+                  </p>
+                </li>
+                <li className="my-3">
+                  <p>
+                    <b>Phone:</b> +8801789293803
+                  </p>
+                </li>
+                <li className="my-3">
+                  <p>
+                    <b>Experience:</b> 2 Years
+                  </p>
+                </li>
+                <li className="mt-3">
+                  <p>
+                    <b>Age:</b> 24
+                  </p>
+                </li>
+              </ul>
+              <ul>
+                <li className="mb-3">
+                  <p>
+                    <b>Address:</b> Savar, Dhaka, Bangladesh
+                  </p>
+                </li>
+                <li className="my-3">
+                  <p>
+                    <b>Work Status:</b> Available
+                  </p>
+                </li>
+                <li className="mt-3">
+                  <p>
+                    <b>Github:</b>{" "}
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
