@@ -25,22 +25,22 @@ export const navigationLinks = [
   {
     id: 2,
     title: "About",
-    href: "/about",
+    href: "#about",
   },
   {
     id: 3,
     title: "Career",
-    href: "/career",
+    href: "#career",
   },
   {
     id: 4,
     title: "Work",
-    href: "/work",
+    href: "#work",
   },
   {
     id: 5,
     title: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ];
 

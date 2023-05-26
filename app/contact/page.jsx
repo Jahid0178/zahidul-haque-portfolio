@@ -5,7 +5,7 @@ const ContactPage = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <section>
+    <section id="contact">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>

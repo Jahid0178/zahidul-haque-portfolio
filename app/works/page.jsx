@@ -8,7 +8,7 @@ import { projects } from "@/data/data";
 
 const WorksPage = () => {
   return (
-    <section>
+    <section id="work">
       <div className="container">
         <h2 className="text-4xl">Latest Works</h2>
         <div className="mt-8">
