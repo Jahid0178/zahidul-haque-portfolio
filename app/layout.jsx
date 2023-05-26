@@ -3,6 +3,7 @@ import Header from "./components/common/Header/Header";
 import "swiper/css";
 import "./globals.css";
 import { Ubuntu } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -19,7 +20,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true} className={ubuntu.className}>
         <Header />
-        <main className="bg-primary text-white">{children}</main>
+        <main className="bg-primary text-white">
+          {children}
+          <Analytics />
+        </main>
         <Footer />
       </body>
     </html>
