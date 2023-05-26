@@ -3,7 +3,7 @@ import DownloadButton from "../components/Buttons/DownloadButton/DownloadButton"
 
 const AboutPage = () => {
   return (
-    <section>
+    <section id="about">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>

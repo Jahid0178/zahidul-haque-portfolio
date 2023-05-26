@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import selfPicture from "/public/images/photo.png";
 import Typed from "typed.js";
@@ -11,9 +11,11 @@ import ContactPage from "./contact/page";
 import ScrollToTop from "./components/Buttons/ScrollToTop/ScrollToTop";
 import WorksPage from "./works/page";
 import CareerPage from "./career/page";
+import Loading from "./components/Loading/Loading";
 
 const HomePage = () => {
   const el = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -22,14 +24,21 @@ const HomePage = () => {
       typeSpeed: 100,
       loop: true,
     });
+
+    const timeOut = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
     return () => {
       typed.destroy();
+      clearTimeout(timeOut);
     };
   }, []);
 
   return (
     // https://devcore-template.webflow.io/
     <>
+      {isLoading && <Loading />}
       <section>
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">

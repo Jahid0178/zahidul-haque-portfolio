@@ -5,7 +5,7 @@ import Link from "next/link";
 const ProjectCard = ({ data }) => {
   const { liveLink, gitLink, title, technologies } = data;
   return (
-    <div>
+    <div className="bg-[#8566FF] bg-opacity-10 p-3 rounded-lg border border-indigo-500">
       <Image
         src={demo}
         alt=""
