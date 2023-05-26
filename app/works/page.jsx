@@ -1,3 +1,5 @@
+"use client";
+
 import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectCard from "../components/Cards/ProjectCard/ProjectCard";
