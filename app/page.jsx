@@ -27,7 +27,7 @@ const HomePage = () => {
 
     const timeOut = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 4000);
 
     return () => {
       typed.destroy();
