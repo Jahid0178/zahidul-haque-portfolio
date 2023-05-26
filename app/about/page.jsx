@@ -9,10 +9,12 @@ const AboutPage = () => {
           <div>
             <h2 className="text-4xl my-5">About Me</h2>
             <p className="mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
+              I&apos;m AKM Zahidul Haque, a MERN Stack Developer with 2 years of
+              experience. Proficient in MongoDB, Express.js, React, Next, and
+              Node.js, I&apos;ve built web applications and RESTful APIs. Feel
+              free to contact me at <b>zahidul.haque767@gmail.com</b> or
+              <b>+8801789293803</b> to discuss how I can assist you with your
+              web development requirements!
             </p>
             <DownloadButton
               href={"/public/assets/pdf/Zahidul-Haque-Resume.pdf"}
@@ -20,7 +22,9 @@ const AboutPage = () => {
               Download CV
             </DownloadButton>
           </div>
-          <div>2</div>
+          <div>
+            <h2>Tech S</h2>
+          </div>
         </div>
       </div>
     </section>
