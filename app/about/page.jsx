@@ -3,6 +3,7 @@ import DownloadButton from "../components/Buttons/DownloadButton/DownloadButton"
 import Link from "next/link";
 import { skills } from "@/data/data";
 import Image from "next/image";
+import va from "@vercel/analytics";
 
 const AboutPage = () => {
   return (
@@ -65,6 +66,7 @@ const AboutPage = () => {
             </div>
             <DownloadButton
               href={"/public/assets/pdf/Zahidul-Haque-Resume.pdf"}
+              onClick={() => va.track("Download Resume Button")}
             >
               Download CV
             </DownloadButton>
