@@ -13,7 +13,7 @@ import Express from "/public/images/skills/express.png";
 import MongoDb from "/public/images/skills/mongodb.png";
 import Redux from "/public/images/skills/redux.png";
 import Tailwind from "/public/images/skills/tailwind.webp";
-import GraphQL from "/public/images/skills/graphql.png";
+// import GraphQL from "/public/images/skills/graphql.png";
 import MUI from "/public/images/skills/mui.png";
 
 // Projects Images
@@ -200,11 +200,6 @@ export const skills = [
   },
   {
     id: 10,
-    icon: GraphQL,
-    title: "GraphQL",
-  },
-  {
-    id: 11,
     icon: Tailwind,
     title: "Tailwind",
   },
