@@ -65,7 +65,9 @@ const AboutPage = () => {
               </ul>
             </div>
             <DownloadButton
-              href={"/public/assets/pdf/Zahidul-Haque-Resume.pdf"}
+              href={
+                "https://drive.google.com/file/d/1AHX0uwhk0yarzanyt5SFpcuicpyS986a/view?usp=sharing"
+              }
               onClick={() => va.track("Download Resume Button")}
             >
               Download CV
