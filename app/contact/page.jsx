@@ -1,9 +1,11 @@
 "use client";
 import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 
 const ContactPage = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => getFormData(data);
+
   return (
     <section id="contact">
       <div className="container">
@@ -56,5 +58,17 @@ const ContactPage = () => {
     </section>
   );
 };
+
+function getFormData(data) {
+  fetch("/api/form", {
+    method: "POST",
+    body: JSON.stringify(data),
+  }).then((response) => {
+    if (!response.ok) {
+      toast.error("Message Not Send");
+    }
+    toast.success("Message Send Successfully");
+  });
+}
 
 export default ContactPage;

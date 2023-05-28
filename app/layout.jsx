@@ -4,6 +4,7 @@ import "swiper/css";
 import "./globals.css";
 import { Ubuntu } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "react-hot-toast";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true} className={ubuntu.className}>
         <Header />
         <main className="bg-primary text-white">
+          <Toaster />
           {children}
           <Analytics />
         </main>
