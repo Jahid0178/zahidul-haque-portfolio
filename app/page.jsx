@@ -12,6 +12,7 @@ import ScrollToTop from "./components/Buttons/ScrollToTop/ScrollToTop";
 import WorksPage from "./works/page";
 import CareerPage from "./career/page";
 import Loading from "./components/Loading/Loading";
+import SkillsPage from "./skills/page";
 
 const HomePage = () => {
   const el = useRef(null);
@@ -80,6 +81,8 @@ const HomePage = () => {
       </section>
       {/* About Me Page */}
       <AboutPage />
+      {/* Skills Page */}
+      <SkillsPage />
       {/* Career Page */}
       <CareerPage />
       {/* Works Page */}

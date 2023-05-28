@@ -20,7 +20,18 @@ const AboutPage = () => {
               <b>+8801789293803</b> to discuss how I can assist you with your
               web development requirements!
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5"></div>
+            <DownloadButton
+              href={
+                "https://drive.google.com/file/d/1AHX0uwhk0yarzanyt5SFpcuicpyS986a/view?usp=sharing"
+              }
+              onClick={() => va.track("Download Resume Button")}
+            >
+              Download CV
+            </DownloadButton>
+          </div>
+          <div>
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <ul>
                 <li className="mb-3">
                   <p>
@@ -63,31 +74,6 @@ const AboutPage = () => {
                   </p>
                 </li>
               </ul>
-            </div>
-            <DownloadButton
-              href={
-                "https://drive.google.com/file/d/1AHX0uwhk0yarzanyt5SFpcuicpyS986a/view?usp=sharing"
-              }
-              onClick={() => va.track("Download Resume Button")}
-            >
-              Download CV
-            </DownloadButton>
-          </div>
-          <div>
-            <h2 className="text-4xl mb-5">Skills</h2>
-            <div className="flex flex-wrap items-center gap-4">
-              {skills.map((skill) => (
-                <div key={skill.id}>
-                  <Image
-                    src={skill.icon}
-                    alt={skill.title}
-                    width={100}
-                    height={100}
-                    className="w-16"
-                    title={skill.title}
-                  />
-                </div>
-              ))}
             </div>
           </div>
         </div>
