@@ -3,6 +3,7 @@ import { mailOptions, transporter } from "@/app/config/nodemailer";
 export async function POST(request) {
   const header = new Headers({ "Content-Type": "application/json" });
   const body = await request.json();
+  console.log(body);
   try {
     await transporter.sendMail({
       ...mailOptions,
@@ -15,10 +16,4 @@ export async function POST(request) {
     console.log(error.message);
   }
   return new Response(POST, header);
-}
-
-export async function GET() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const users = await res.json();
-  return Response.json({ users });
 }
