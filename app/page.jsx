@@ -38,7 +38,6 @@ const HomePage = () => {
 
   return (
     // https://devcore-template.webflow.io/
-    // https://devcore-template.webflow.io/
     <>
       {isLoading && <Loading />}
       <section>
