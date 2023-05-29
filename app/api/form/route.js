@@ -3,7 +3,6 @@ import { mailOptions, transporter } from "@/app/config/nodemailer";
 export async function POST(request) {
   const header = new Headers({ "Content-Type": "application/json" });
   const body = await request.json();
-  console.log(body);
   try {
     await transporter.sendMail({
       ...mailOptions,
