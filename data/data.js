@@ -35,13 +35,13 @@ export const navigationLinks = [
   },
   {
     id: 3,
-    title: "Career",
-    href: "#career",
+    title: "Work",
+    href: "#work",
   },
   {
     id: 4,
-    title: "Work",
-    href: "#work",
+    title: "Blogs",
+    href: "#blogs",
   },
   {
     id: 5,
