@@ -1,5 +1,5 @@
-import { skills } from "@/data/data";
 import Image from "next/image";
+import { skills } from "@/data/data";
 
 const SkillsPage = () => {
   return (
@@ -13,7 +13,7 @@ const SkillsPage = () => {
               title={skill.title}
               className="border border-black px-4 py-2 cursor-pointer rounded"
             >
-              <span>{skill.title}</span>
+              <span data-scroll>{skill.title}</span>
             </div>
           ))}
         </div>

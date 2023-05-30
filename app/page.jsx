@@ -71,7 +71,8 @@ const HomePage = () => {
                 alt="Zahidul Haque Picture"
                 width={200}
                 height={200}
-                className="mx-auto w-64"
+                className="mx-auto w-64 grayscale hover:grayscale-0 transition-all ease-in-out delay-200"
+                draggable={false}
               />
             </div>
           </div>
