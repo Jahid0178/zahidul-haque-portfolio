@@ -18,7 +18,7 @@
   }
 
   .text-primary {
-    @apply text-[#111223];
+    @apply text-[#2B2B2B];
   }
 
   .text-secondary {

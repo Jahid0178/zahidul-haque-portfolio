@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true} className={ubuntu.className}>
         <Header />
-        <main className="bg-primary text-white">
+        <main className="bg-white text-black">
           <Toaster />
           {children}
           <Analytics />

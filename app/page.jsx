@@ -48,32 +48,33 @@ const HomePage = () => {
           </p>
         </div>
       </section>
+      <div className="fixed flex flex-col gap-4 inset-y-2/4 right-0">
+        {socialLinks.map((socialLink) => (
+          <IconButton
+            key={socialLink.id}
+            title={socialLink.title}
+            href={socialLink.link}
+            type={socialLink.type}
+            onClick={() => console.log("clicked on social link")}
+            className="hover:bg-black hover:text-white p-2 rounded-sm"
+            target="_blank"
+          >
+            {socialLink.icon}
+          </IconButton>
+        ))}
+      </div>
       <section>
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
             <div>
-              <h4 className="text-secondary text-xl tracking-widest">
-                Hi! I&apos;m Zahidul Haque
+              <h4 className="text-primary text-8xl md:text-[260px] font-bold tracking-widest">
+                Hello<span className="text-[#FED9CA]">.</span>
               </h4>
-              <h1 className="text-4xl md:text-6xl my-4">
-                MERN Stack Developer Front End Focused
+              <h1 className="text-2xl md:text-4xl my-4">
+                My name is Zahidul Haque. MERN Stack Developer Front End
+                Focused.
               </h1>
               <span className="text-lg" ref={el}></span>
-              <div className="mt-4 flex gap-4 flex-wrap">
-                {socialLinks.map((socialLink) => (
-                  <IconButton
-                    key={socialLink.id}
-                    title={socialLink.title}
-                    href={socialLink.link}
-                    type={socialLink.type}
-                    onClick={() => console.log("clicked on social link")}
-                    className="hover:bg-indigo-800 p-2 rounded-sm"
-                    target="_blank"
-                  >
-                    {socialLink.icon}
-                  </IconButton>
-                ))}
-              </div>
             </div>
             <div>
               <Image
