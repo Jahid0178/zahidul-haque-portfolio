@@ -127,6 +127,17 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      <section>
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-right">
+            Awards I&apos;ve earned.
+          </h2>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>1</div>
+            <div>2</div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

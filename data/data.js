@@ -44,7 +44,7 @@ export const navigationLinks = [
   {
     id: 5,
     title: "Contact",
-    href: "#contact",
+    href: "/contact",
   },
 ];
 
