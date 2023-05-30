@@ -39,7 +39,15 @@ const HomePage = () => {
   return (
     // https://devcore-template.webflow.io/
     <>
-      {isLoading && <Loading />}
+      {/* {isLoading && <Loading />} */}
+      <section>
+        <div className="container">
+          <p className="text-center text-xl bg-orange-500 rounded p-2">
+            Version changes are in progress. If facing any problem. Sincerely
+            sorry.
+          </p>
+        </div>
+      </section>
       <section>
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
