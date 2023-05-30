@@ -49,7 +49,10 @@ const Header = () => {
                         className={`text-7xl font-bold relative before:absolute before:inset-x-0 before:bottom-6 before:h-6 before:bg-[#FED9CA] before:w-0 before:hover:w-full before:transition-all before:duration-300 before:ease-in-out hover:text-black ${
                           active === ind ? "text-black" : ""
                         }`}
-                        onClick={() => setActive(ind)}
+                        onClick={() => {
+                          setActive(ind);
+                          setIsOpen(!isOpen);
+                        }}
                       >
                         <span className="relative">{title}</span>
                       </Link>
