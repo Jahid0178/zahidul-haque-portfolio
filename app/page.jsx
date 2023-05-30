@@ -6,13 +6,9 @@ import selfPicture from "/public/images/photo.png";
 import Typed from "typed.js";
 import { socialLinks } from "@/data/data";
 import IconButton from "./components/Buttons/IconButton/IconButton";
-import AboutPage from "./about/page";
-import ContactPage from "./contact/page";
-import ScrollToTop from "./components/Buttons/ScrollToTop/ScrollToTop";
 import WorksPage from "./works/page";
-import CareerPage from "./career/page";
-import Loading from "./components/Loading/Loading";
 import SkillsPage from "./skills/page";
+import Link from "next/link";
 
 const HomePage = () => {
   const el = useRef(null);
@@ -92,8 +88,19 @@ const HomePage = () => {
       <SkillsPage />
       {/* Works Page */}
       <WorksPage />
-      {/* Contact Me Page */}
-      <ContactPage />
+      <section>
+        <div className="container">
+          <div className="text-center w-full md:w-3/6 mx-auto">
+            <h2 className="text-xl md:text-3xl mb-3">
+              Like my work? Want to have a good quality projects? You can
+              contact me now!
+            </h2>
+            <Link href={"/contact"} className="btn-primary">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
