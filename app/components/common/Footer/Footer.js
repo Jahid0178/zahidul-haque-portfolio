@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { BsGithub, BsFacebook, BsLinkedin } from "react-icons/bs";
+import ScrollToTop from "../../Buttons/ScrollToTop/ScrollToTop";
 
 const Footer = () => {
   return (
@@ -28,6 +29,10 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      {/* Scroll To Top Button */}
+      <span className="fixed right-4 bottom-3">
+        <ScrollToTop />
+      </span>
     </footer>
   );
 };

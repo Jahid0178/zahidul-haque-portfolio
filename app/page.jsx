@@ -94,10 +94,6 @@ const HomePage = () => {
       <WorksPage />
       {/* Contact Me Page */}
       <ContactPage />
-      {/* Scroll To Top Button */}
-      <span className="fixed right-4 bottom-3">
-        <ScrollToTop />
-      </span>
     </>
   );
 };
