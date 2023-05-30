@@ -5,7 +5,7 @@ import { BsGithub, BsFacebook, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="py-4 bg-primary text-white">
+    <footer className="py-4 text-black border-t">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© {new Date().getFullYear()} Zahidul Haque. All Right Reserved</p>
