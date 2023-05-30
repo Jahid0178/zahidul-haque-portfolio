@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import selfPicture from "/public/images/photo.png";
 import Typed from "typed.js";
@@ -12,7 +12,6 @@ import Link from "next/link";
 
 const HomePage = () => {
   const el = useRef(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -22,20 +21,14 @@ const HomePage = () => {
       loop: true,
     });
 
-    const timeOut = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-
     return () => {
       typed.destroy();
-      clearTimeout(timeOut);
     };
   }, []);
 
   return (
     // https://devcore-template.webflow.io/
     <>
-      {/* {isLoading && <Loading />} */}
       <section>
         <div className="container">
           <p className="text-center text-xl bg-orange-500 rounded p-2">

@@ -10,7 +10,7 @@ const WorksPage = () => {
   return (
     <section id="work">
       <div className="container">
-        <h2 className="text-4xl">Latest Works</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Latest Works</h2>
         <div className="mt-8">
           <Swiper
             slidesPerView={4}
