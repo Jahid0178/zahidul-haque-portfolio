@@ -52,7 +52,7 @@ const HomePage = () => {
           </IconButton>
         ))}
       </div>
-      <section>
+      <section data-scroll-container>
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
             <div>

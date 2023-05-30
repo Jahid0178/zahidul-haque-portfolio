@@ -7,6 +7,7 @@ import "./globals.css";
 import { Ubuntu } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "react-hot-toast";
+import Cursor from "./components/Cursor/Cursor";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true} className={ubuntu.className}>
         <Header />
         <main className="bg-white text-black">
+          <Cursor />
           <Toaster />
           {children}
           <Analytics />
