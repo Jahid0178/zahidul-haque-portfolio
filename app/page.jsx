@@ -88,8 +88,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* About Me Page */}
-      <AboutPage />
       {/* Skills Page */}
       <SkillsPage />
       {/* Career Page */}

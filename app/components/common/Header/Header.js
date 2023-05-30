@@ -14,7 +14,7 @@ const Header = () => {
   console.log(active);
 
   return (
-    <header className="py-5 bg-primary text-white">
+    <header className="py-5">
       <div className="container">
         <nav className="flex justify-between md:flex-row gap-4 items-center">
           <Logo />

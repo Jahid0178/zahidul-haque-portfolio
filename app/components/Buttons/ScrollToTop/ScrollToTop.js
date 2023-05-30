@@ -39,7 +39,7 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
       style={{ display: visible ? "inline" : "none" }}
     >
-      <BsFillArrowUpCircleFill size={30} color="#6e49ff" />
+      <BsFillArrowUpCircleFill size={30} color="#000" />
     </button>
   );
 };

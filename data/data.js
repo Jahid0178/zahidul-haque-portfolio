@@ -1,7 +1,5 @@
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
-import MabiasLogo from "/public/images/company/mabias.jpg";
-import RightbizLogo from "/public/images/company/rightbiz.jpg";
 
 // Skills Images
 import HTML from "/public/images/skills/html.png";
@@ -31,7 +29,7 @@ export const navigationLinks = [
   {
     id: 2,
     title: "About",
-    href: "#about",
+    href: "/about",
   },
   {
     id: 3,
@@ -81,7 +79,6 @@ export const socialLinks = [
 export const comapnyNames = [
   {
     id: 1,
-    logo: MabiasLogo,
     companyName: "Mabias",
     roll: "Front End Developer",
     location: "Dhaka, Bangladesh",
@@ -92,7 +89,6 @@ export const comapnyNames = [
   },
   {
     id: 2,
-    logo: RightbizLogo,
     companyName: "Rightbiz",
     roll: "Front End Developer",
     location: "London, UK",
