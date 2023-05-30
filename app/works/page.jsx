@@ -14,7 +14,7 @@ const WorksPage = () => {
         <div className="mt-8">
           <Swiper
             slidesPerView={4}
-            spaceBetween={20}
+            spaceBetween={10}
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
             loop={true}

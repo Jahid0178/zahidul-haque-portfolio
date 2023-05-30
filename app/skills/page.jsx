@@ -11,7 +11,7 @@ const SkillsPage = () => {
             <div
               key={skill.id}
               title={skill.title}
-              className="border border-black px-4 py-2 cursor-pointer rounded"
+              className="border border-black px-4 py-2 cursor-pointer rounded bg-white hover:bg-black hover:text-white transition-all ease-linear duration-200"
             >
               <span data-scroll>{skill.title}</span>
             </div>

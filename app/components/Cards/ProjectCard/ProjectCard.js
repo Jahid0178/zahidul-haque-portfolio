@@ -4,7 +4,7 @@ import Link from "next/link";
 const ProjectCard = ({ data }) => {
   const { liveLink, gitLink, title, technologies, image } = data;
   return (
-    <div className="bg-[#8566FF] bg-opacity-10 p-3 rounded-lg border border-indigo-500">
+    <div className="bg-white bg-opacity-10 p-3 rounded-lg border border-black">
       <Image
         src={image}
         alt=""
@@ -26,19 +26,6 @@ const ProjectCard = ({ data }) => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros.
         </p>
-        <div className="mt-2">
-          <h4 className="text-lg font-bold">Technology used</h4>
-          <ul className="flex gap-4 mt-2 overflow-x-auto whitespace-nowrap snap-x-mandatory">
-            {technologies.map((technologi, ind) => (
-              <li
-                className="border p-1 rounded whitespace-nowrap snap-child cursor-pointer"
-                key={ind}
-              >
-                {technologi}
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </div>
   );
