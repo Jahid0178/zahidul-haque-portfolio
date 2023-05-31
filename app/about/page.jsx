@@ -136,7 +136,7 @@ const AboutPage = () => {
             {awards.map((award) => {
               const { id, title, src, institute } = award;
               return (
-                <div key={id}>
+                <div key={id} className="p-2">
                   <Image src={src} alt={title} width={500} height={500} />
                   <div className="mt-2">
                     <h2 className="text-xl">{title}</h2>
