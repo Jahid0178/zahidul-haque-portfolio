@@ -39,8 +39,6 @@ const Cursor = () => {
     },
   };
 
-  console.log(resize);
-
   return (
     <motion.div
       className={`w-16 h-16 border-2 border-black fixed top-0 left-0 rounded-full z-50 pointer-events-none ${
