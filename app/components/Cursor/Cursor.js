@@ -8,6 +8,7 @@ const Cursor = () => {
     x: 0,
     y: 0,
   });
+  const [resize, setResize] = useState(0);
 
   useEffect(() => {
     const mouseMove = (e) => {
@@ -16,10 +17,18 @@ const Cursor = () => {
         y: e.clientY,
       });
     };
+
+    const windowResize = () => {
+      setResize(window.innerWidth);
+    };
+
     window.addEventListener("mousemove", mouseMove);
+
+    window.addEventListener("resize", windowResize);
 
     return () => {
       window.addEventListener("mousemove", mouseMove);
+      window.addEventListener("resize", windowResize);
     };
   }, []);
 
@@ -30,9 +39,13 @@ const Cursor = () => {
     },
   };
 
+  console.log(resize);
+
   return (
     <motion.div
-      className="w-16 h-16 border-2 border-black fixed top-0 left-0 rounded-full z-50 pointer-events-none"
+      className={`w-16 h-16 border-2 border-black fixed top-0 left-0 rounded-full z-50 pointer-events-none ${
+        resize > 567 ? "block" : "hidden"
+      }`}
       variants={variants}
       animate="default"
     />
