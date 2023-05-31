@@ -200,3 +200,18 @@ export const skills = [
     title: "Tailwind",
   },
 ];
+
+export const awards = [
+  {
+    id: 1,
+    src: "https://i.ibb.co/NKHTJ0z/certificate.png",
+    title: "Responsive Web Design",
+    institute: "freeCodeCamp",
+  },
+  {
+    id: 2,
+    src: "https://i.ibb.co/mRVV39y/p-hero-certificate.jpg",
+    title: "Complete Web Development Certificate",
+    institute: "Programming Hero",
+  },
+];

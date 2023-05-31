@@ -1,7 +1,7 @@
 import React from "react";
 import DownloadButton from "../components/Buttons/DownloadButton/DownloadButton";
 import Link from "next/link";
-import { comapnyNames, skills } from "@/data/data";
+import { awards, comapnyNames, skills } from "@/data/data";
 import Image from "next/image";
 import va from "@vercel/analytics";
 import PageHeader from "../components/common/PageHeader/PageHeader";
@@ -132,9 +132,19 @@ const AboutPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-right">
             Awards I&apos;ve earned.
           </h2>
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>1</div>
-            <div>2</div>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {awards.map((award) => {
+              const { id, title, src, institute } = award;
+              return (
+                <div key={id}>
+                  <Image src={src} alt={title} width={500} height={500} />
+                  <div className="mt-2">
+                    <h2 className="text-xl">{title}</h2>
+                    <p className="text-lg">{institute}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
