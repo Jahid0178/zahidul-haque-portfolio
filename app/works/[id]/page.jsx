@@ -32,10 +32,18 @@ const WorkDetails = ({ params }) => {
           <div className="p-1">
             <h2 className="text-2xl font-bold mb-2">{title}</h2>
             <div className="flex gap-3 mb-4">
-              <Link href={liveLink || ""} target="_blank">
+              <Link
+                className="hover:underline"
+                href={liveLink || ""}
+                target="_blank"
+              >
                 Live Link
               </Link>
-              <Link href={gitLink || ""} target="_blank">
+              <Link
+                className="hover:underline"
+                href={gitLink || ""}
+                target="_blank"
+              >
                 Git Link
               </Link>
             </div>

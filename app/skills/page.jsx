@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { skills } from "@/data/data";
 
 const SkillsPage = () => {
