@@ -6,12 +6,14 @@ import ProjectCard from "../components/Cards/ProjectCard/ProjectCard";
 import "swiper/css/pagination";
 import { projects } from "@/data/data";
 import PageHeader from "../components/common/PageHeader/PageHeader";
+import { usePathname } from "next/navigation";
 
 const WorksPage = () => {
+  const pathname = usePathname();
   return (
     <section id="work">
       <div className="container">
-        <PageHeader title="Works" />
+        {pathname.slice(1) && <PageHeader title="Works" />}
         <h2 className="text-3xl md:text-4xl font-bold">Latest Works</h2>
         <div className="mt-8">
           <Swiper
