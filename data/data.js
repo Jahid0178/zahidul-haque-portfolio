@@ -33,13 +33,13 @@ export const navigationLinks = [
   },
   {
     id: 3,
-    title: "Work",
-    href: "#work",
+    title: "Works",
+    href: "/works",
   },
   {
     id: 4,
     title: "Blogs",
-    href: "#blogs",
+    href: "/blogs",
   },
   {
     id: 5,

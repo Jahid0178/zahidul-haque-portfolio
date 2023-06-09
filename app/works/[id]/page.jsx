@@ -1,5 +1,7 @@
 "use client";
 
+import Button from "@/app/components/Buttons/Button/Button";
+import PageHeader from "@/app/components/common/PageHeader/PageHeader";
 import { projects } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +21,8 @@ const WorkDetails = ({ params }) => {
   return (
     <section>
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <PageHeader title={title} style={{ fontSize: "5rem" }} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <div className="p-1">
             <Image
               src={image}
@@ -30,7 +33,7 @@ const WorkDetails = ({ params }) => {
             />
           </div>
           <div className="p-1">
-            <h2 className="text-2xl font-bold mb-2">{title}</h2>
+            {/* <h2 className="text-2xl font-bold mb-2">{title}</h2> */}
             <div className="flex gap-3 mb-4">
               <Link
                 className="hover:underline"
@@ -68,6 +71,7 @@ const WorkDetails = ({ params }) => {
                   ))}
                 </ul>
               </div>
+              <Button href="/works">Back To Works Page</Button>
             </div>
           </div>
         </div>
