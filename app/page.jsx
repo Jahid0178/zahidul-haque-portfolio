@@ -31,10 +31,10 @@ const HomePage = () => {
     <>
       <section>
         <div className="container">
-          <p className="text-center text-xl bg-orange-500 rounded p-2">
+          {/* <p className="text-center text-xl bg-orange-500 rounded p-2">
             Version changes are in progress. If facing any problem. Sincerely
             sorry.
-          </p>
+          </p> */}
         </div>
       </section>
       <div className="fixed flex flex-col gap-4 inset-y-2/4 right-0">
