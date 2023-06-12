@@ -3,7 +3,7 @@
 
 
 ## 🚀 About Me
-My name is Zahidul Haque. Lived In Dhaka, Bangladesh. I'm a MERN stack developer. I have 2 years professional experience. Checkmate
+My name is Zahidul Haque. Lived In Dhaka, Bangladesh. I'm a MERN stack developer. I have 2 years professional experience. Checkmate 👑
 
 
 ## Screenshots
