@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import DownloadButton from "../components/Buttons/DownloadButton/DownloadButton";
 import Link from "next/link";
 import { awards, comapnyNames, skills } from "@/data/data";
@@ -8,6 +10,10 @@ import PageHeader from "../components/common/PageHeader/PageHeader";
 import AboutPic from "/public/images/photo.jpg";
 
 const AboutPage = () => {
+  const [overlayOpen, setOverlayOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState("");
+  console.log(imgSrc);
+
   return (
     <>
       <section id="about">
@@ -137,7 +143,16 @@ const AboutPage = () => {
               const { id, title, src, institute } = award;
               return (
                 <div key={id} className="p-2">
-                  <Image src={src} alt={title} width={500} height={500} />
+                  <Image
+                    src={src}
+                    alt={title}
+                    width={500}
+                    height={500}
+                    onClick={() => {
+                      setOverlayOpen(!overlayOpen);
+                      setImgSrc(src);
+                    }}
+                  />
                   <div className="mt-2">
                     <h2 className="text-xl">{title}</h2>
                     <p className="text-lg">{institute}</p>
@@ -146,6 +161,16 @@ const AboutPage = () => {
               );
             })}
           </div>
+
+          {overlayOpen && (
+            <div
+              id="overlay"
+              className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex justify-center items-center h-screen"
+              onClick={() => setOverlayOpen(!overlayOpen)}
+            >
+              <Image src={imgSrc} alt="Image" width={1000} height={1000} />
+            </div>
+          )}
         </div>
       </section>
     </>

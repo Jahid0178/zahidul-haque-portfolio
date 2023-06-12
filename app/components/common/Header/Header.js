@@ -12,8 +12,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState(0);
 
-  console.log(active);
-
   return (
     <header className="py-5">
       <div className="container">

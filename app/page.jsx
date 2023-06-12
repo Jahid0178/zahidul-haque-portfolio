@@ -65,7 +65,14 @@ const HomePage = () => {
               </h1>
               <span className="text-lg" ref={el}></span>
             </div>
-            <div>
+            <div className="relative">
+              <Image
+                src="/assets/shapes/shape-3.png"
+                alt="shape"
+                width={550}
+                height={550}
+                className="absolute top-0 left-0 right-0 mx-auto"
+              />
               <Image
                 src={selfPicture}
                 alt="Zahidul Haque Picture"
