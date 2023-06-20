@@ -8,7 +8,7 @@ My name is Zahidul Haque. Lived In Dhaka, Bangladesh. I'm a MERN stack developer
 
 ## Screenshots
 
-![App Screenshot](https://i.ibb.co/zPdHdz5/portfolio.png)
+![App Screenshot](https://i.ibb.co/94GLQzM/portfolio.png)
 
 
 ## Features
