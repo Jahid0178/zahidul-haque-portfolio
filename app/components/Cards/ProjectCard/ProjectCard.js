@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProjectCard = ({ data }) => {
-  const { liveLink, gitLink, title, image, id } = data;
+  const { liveLink, gitLink, title, image, id, description } = data;
   return (
     <div className="bg-white bg-opacity-10 p-3 rounded border border-black">
       <Image
@@ -22,10 +22,7 @@ const ProjectCard = ({ data }) => {
             Git Link
           </Link>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
+        <p>{description}</p>
         <Link href={`/works/${id}`} className="btn-primary mt-4">
           See More Details
         </Link>

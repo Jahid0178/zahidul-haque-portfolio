@@ -19,6 +19,7 @@ import Mixy from "/public/images/projects/mixy.png";
 import AdminPanel from "/public/images/projects/admin.png";
 import Agro from "/public/images/projects/agro.png";
 import Gym from "/public/images/projects/gym.png";
+import HacienTequila from "/public/images/projects/hacien.png";
 
 export const navigationLinks = [
   {
@@ -116,6 +117,7 @@ export const projects = [
       "Formik",
       "Yup Validation",
     ],
+    description: "Update Soon",
     liveLink: "https://agro-grocery.netlify.app/",
     gitLink: "https://github.com/Jahid0178/agro-grocery-client",
   },
@@ -124,6 +126,7 @@ export const projects = [
     title: "Admin Dashboard",
     image: AdminPanel,
     technologies: ["React", "Syncfusion", "React Context API", "Tailwind"],
+    description: "Update Soon",
     liveLink: "https://glittering-crisp-db6420.netlify.app/",
     gitLink: "https://github.com/Jahid0178/Admin-Dashboard-React",
   },
@@ -140,6 +143,7 @@ export const projects = [
       "Experss",
       "MongoDB",
     ],
+    description: "Update Soon",
     liveLink: "https://mixy-ecommerce-jahid0178.vercel.app/",
     gitLink: "https://github.com/Jahid0178/mixy-ecommerce-client",
   },
@@ -148,8 +152,18 @@ export const projects = [
     title: "GYM Website",
     image: Gym,
     technologies: ["React", "React Bootstrap", "Firebase Authentication"],
+    description: "Update Soon",
     liveLink: "https://gym-website-25129.web.app/home",
     gitLink: "https://github.com/Jahid0178/GYM",
+  },
+  {
+    id: 5,
+    title: "Hacien Tequila",
+    image: HacienTequila,
+    technologies: ["Next Js 13", "Tailwind CSS", "Typescript"],
+    description: "Update Soon",
+    liveLink: "https://hacien-tequilla-client.vercel.app",
+    gitLink: "https://github.com/Jahid0178/Hacien-Tequilla-Client",
   },
 ];
 
@@ -203,6 +217,16 @@ export const skills = [
     id: 10,
     icon: Tailwind,
     title: "Tailwind",
+  },
+  {
+    id: 11,
+    icon: Tailwind,
+    title: "Mantine UI",
+  },
+  {
+    id: 12,
+    icon: Tailwind,
+    title: "Ant Design",
   },
 ];
 

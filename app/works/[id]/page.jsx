@@ -16,7 +16,7 @@ const WorkDetails = ({ params }) => {
     setData(filteredItems[0]);
   }, [id]);
 
-  const { image, title, gitLink, liveLink, technologies } = data;
+  const { image, title, gitLink, liveLink, technologies, description } = data;
 
   return (
     <section>
@@ -52,15 +52,7 @@ const WorkDetails = ({ params }) => {
             </div>
             <div>
               <h2 className="text-xl mb-2">Description</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                accusantium itaque sed harum architecto commodi, molestias illum
-                veritatis quasi praesentium deserunt expedita maiores! Ipsum
-                velit, vel repellat inventore reiciendis repellendus, sunt
-                voluptatem officiis beatae accusamus itaque est maiores cum
-                porro necessitatibus asperiores voluptates cupiditate officia.
-                Cupiditate fuga rem ullam totam?
-              </p>
+              <p>{description}</p>
               <div className="mt-4">
                 <h3 className="text-xl">Technologies Used</h3>
                 <ul>

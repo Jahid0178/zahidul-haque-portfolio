@@ -9,6 +9,7 @@ import IconButton from "./components/Buttons/IconButton/IconButton";
 import WorksPage from "./works/page";
 import SkillsPage from "./skills/page";
 import Link from "next/link";
+import BlogsPage from "./blogs/page";
 
 const HomePage = () => {
   const el = useRef(null);
@@ -102,6 +103,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <BlogsPage />
     </>
   );
 };
