@@ -90,7 +90,7 @@ export const comapnyNames = [
     location: "Dhaka, Bangladesh",
     jobType: "Intern",
     type: "Remote",
-    start: "Sep 2022",
+    start: "Jan 2023",
     end: "Mar 2023",
   },
   {
