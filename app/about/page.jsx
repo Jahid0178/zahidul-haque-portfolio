@@ -40,22 +40,15 @@ const AboutPage = () => {
               </DownloadButton>
             </div>
             <div>
-              <p className="mb-5 text-lg">
-                I&apos;m AKM Zahidul Haque, a MERN Stack Developer with 2 years
-                of experience. Proficient in MongoDB, Express.js, React, Next,
-                and Node.js, I&apos;ve built web applications and RESTful APIs.
-                Feel free to contact me at <b>zahidul.haque767@gmail.com</b> or
-                <b>+8801789293803</b> to discuss how I can assist you with your
-                web development requirements!
+              <p className="mb-5 text-xl">
+                My name’s Zahidul Haque. I am a web developer based in
+                Bangladesh. I am adept in quite few technologies ie. MERN stack.
+                I try to learn new technologies that pique my interest in my
+                free time & play video games 🎮.
               </p>
               <div className="flex flex-col md:flex-row gap-4">
                 <ul>
                   <li className="mb-3">
-                    <p>
-                      <b>Name:</b> AKM Zahidul Haque
-                    </p>
-                  </li>
-                  <li className="my-3">
                     <p>
                       <b>Phone:</b> +8801789293803
                     </p>
