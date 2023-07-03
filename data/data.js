@@ -117,7 +117,8 @@ export const projects = [
       "Formik",
       "Yup Validation",
     ],
-    description: "Update Soon",
+    description: `Agro Grocery is an innovative online platform offering a wide range of groceries. With a userfriendly interface, it provides detailed product pages with descriptions, images, and pricing. Shop conveniently and
+    make informed decisions at Agro Grocery.`,
     liveLink: "https://agro-grocery.netlify.app/",
     gitLink: "https://github.com/Jahid0178/agro-grocery-client",
   },
@@ -126,7 +127,9 @@ export const projects = [
     title: "Admin Dashboard",
     image: AdminPanel,
     technologies: ["React", "Syncfusion", "React Context API", "Tailwind"],
-    description: "Update Soon",
+    description: `This Admin Dashboard built with React and Syncfusion technologies, the admin panel offers
+    a powerful toolset for website operations. Users can manage lists, sort data, access useful tools like a calendar and
+    kanban board, and visualize data with line and area charts.`,
     liveLink: "https://glittering-crisp-db6420.netlify.app/",
     gitLink: "https://github.com/Jahid0178/Admin-Dashboard-React",
   },
@@ -161,7 +164,10 @@ export const projects = [
     title: "Hacien Tequila",
     image: HacienTequila,
     technologies: ["Next Js 13", "Tailwind CSS", "Typescript"],
-    description: "Update Soon",
+    description: `Hacien Tequila project is a Next.js, Tailwind CSS, and TypeScript development that presents a
+    collection of premium tequila drinks. Users can explore detailed product pages, discover comprehensive information,
+    and stay engaged with company events. Experience the world of Hacien Tequila, indulge in exquisite drinks, and stay
+    informed about upcoming events`,
     liveLink: "https://hacien-tequilla-client.vercel.app",
     gitLink: "https://github.com/Jahid0178/Hacien-Tequilla-Client",
   },

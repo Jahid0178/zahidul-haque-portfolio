@@ -22,7 +22,9 @@ const ProjectCard = ({ data }) => {
             Git Link
           </Link>
         </div>
-        <p>{description}</p>
+        <p>
+          Click <b>See More Details</b> Button To Get More Details About Project
+        </p>
         <Link href={`/works/${id}`} className="btn-primary mt-4">
           See More Details
         </Link>
