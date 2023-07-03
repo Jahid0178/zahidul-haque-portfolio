@@ -16,7 +16,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["MERN Stack Developer", "Front End Developer", "Freelancer"],
+      strings: ["MERN Stack Developer", "Front End Developer"],
       smartBackspace: true,
       typeSpeed: 100,
       loop: true,
