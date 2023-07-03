@@ -7,7 +7,7 @@ import { awards, comapnyNames, skills } from "@/data/data";
 import Image from "next/image";
 import va from "@vercel/analytics";
 import PageHeader from "../components/common/PageHeader/PageHeader";
-import AboutPic from "/public/images/photo.jpg";
+import AboutPic from "/public/images/work-from-anywhere.png";
 
 const AboutPage = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
@@ -19,7 +19,7 @@ const AboutPage = () => {
       <section id="about">
         <div className="container">
           <PageHeader title="About" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <div className="text-center">
               <div className="mb-4">
                 <Image
