@@ -20,6 +20,7 @@ import AdminPanel from "/public/images/projects/admin.png";
 import Agro from "/public/images/projects/agro.png";
 import Gym from "/public/images/projects/gym.png";
 import HacienTequila from "/public/images/projects/hacien.png";
+import HektoFurniture from "/public/images/projects/hekto.png";
 
 export const navigationLinks = [
   {
@@ -170,6 +171,15 @@ export const projects = [
     informed about upcoming events`,
     liveLink: "https://hacien-tequilla-client.vercel.app",
     gitLink: "https://github.com/Jahid0178/Hacien-Tequilla-Client",
+  },
+  {
+    id: 6,
+    title: "Hekto Furniture Shop",
+    image: HektoFurniture,
+    technologies: ["Next Js 13", "Tailwind CSS", "Typescript", "Next-auth"],
+    description: `This is project is furniture buying full-stack website. This project is under development. 🙂`,
+    liveLink: "https://hekto-furniture-shop.vercel.app/",
+    gitLink: "https://github.com/Jahid0178/Hekto-Furniture-Shop",
   },
 ];
 

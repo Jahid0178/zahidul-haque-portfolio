@@ -1,12 +1,10 @@
 "use client";
 
-import { Pagination, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectCard from "../components/Cards/ProjectCard/ProjectCard";
-import "swiper/css/pagination";
 import { projects } from "@/data/data";
 import PageHeader from "../components/common/PageHeader/PageHeader";
 import { usePathname } from "next/navigation";
+import "swiper/css/pagination";
 
 const WorksPage = () => {
   const pathname = usePathname();
@@ -15,38 +13,10 @@ const WorksPage = () => {
       <div className="container">
         {pathname.slice(1) && <PageHeader title="Works" />}
         <h2 className="text-3xl md:text-4xl font-bold">Latest Works</h2>
-        <div className="mt-8">
-          <Swiper
-            slidesPerView={4}
-            spaceBetween={10}
-            modules={[Pagination, Autoplay]}
-            pagination={{ clickable: true }}
-            loop={true}
-            autoplay={{
-              delay: 2000,
-            }}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              640: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-              },
-            }}
-            className="mySwiper pb-9"
-          >
-            {projects.map((project) => (
-              <SwiperSlide key={project.id}>
-                <ProjectCard data={project} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} data={project} />
+          ))}
         </div>
       </div>
     </section>
