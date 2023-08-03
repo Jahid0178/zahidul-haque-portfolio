@@ -1,7 +1,7 @@
 const PageHeader = ({ title, ...rest }) => {
   return (
     <h2
-      className="text-primary text-7xl md:text-[260px] font-bold tracking-widest mb-4 drop-shadow-lg"
+      className="text-primary text-4xl md:text-6xl font-bold tracking-widest drop-shadow-lg text-center mb-12"
       {...rest}
     >
       {title}

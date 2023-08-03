@@ -53,15 +53,15 @@ const ContactPage = () => {
       </section>
       <section id="contact">
         <div className="container">
-          <div className="flex flex-col w-full md:w-2/4 gap-4">
+          <div className="flex flex-col w-full md:w-2/4 mx-auto gap-4">
             <div>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form onSubmit={handleSubmit(onSubmit)} className="p-3">
                 <label className="mb-2 inline-block" htmlFor="fullName">
                   Full Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="fullName"
-                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black focus:border-b-2 focus:border-black border-b-2 border-transparent"
+                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black border-b-2 border"
                   {...register("fullName", { required: true })}
                   type="text"
                   placeholder="Enter your full name"
@@ -71,7 +71,7 @@ const ContactPage = () => {
                 </label>
                 <input
                   id="email"
-                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black focus:border-b-2 focus:border-black border-b-2 border-transparent"
+                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black border-b-2 border"
                   {...register("email", { required: true })}
                   type="email"
                   placeholder="Enter your email address"
@@ -81,13 +81,15 @@ const ContactPage = () => {
                 </label>
                 <textarea
                   id="message"
-                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black resize-none focus:border-b-2 focus:border-black border-b-2 border-transparent"
+                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black resize-none border-b-2 border"
                   type="text"
                   {...register("message", { required: true })}
                   placeholder="Enter your message..."
                   rows={5}
                 ></textarea>
-                <input className="btn-primary" type="submit" />
+                <div className="text-center">
+                  <input className="btn-primary" type="submit" />
+                </div>
               </form>
             </div>
           </div>

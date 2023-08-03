@@ -93,7 +93,25 @@ const AboutPage = () => {
       </section>
       <section>
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold">My experience</h2>
+          <PageHeader title="Skills" />
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            {skills.map((skill) => (
+              <div key={skill.id} className="p-4 text-center shadow-md">
+                <Image
+                  src={skill.icon}
+                  width={50}
+                  height={50}
+                  className="mx-auto"
+                />
+                <p className="mt-2">{skill.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <PageHeader title="My Experience" />
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {comapnyNames.map((companyName) => {
               const {

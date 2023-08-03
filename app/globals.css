@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
   }
 
   section {
-    @apply py-10 bg-white;
+    @apply py-20 bg-white;
   }
 
   footer {

@@ -12,7 +12,7 @@ const WorksPage = () => {
     <section id="work">
       <div className="container">
         {pathname.slice(1) && <PageHeader title="Works" />}
-        <h2 className="text-3xl md:text-4xl font-bold">Latest Works</h2>
+        <PageHeader title="Latest Works" />
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {projects.map((project) => (
             <ProjectCard key={project.id} data={project} />
