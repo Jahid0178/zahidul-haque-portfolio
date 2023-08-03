@@ -9,7 +9,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <section>
+      <section id="contact">
         <div className="container">
           <PageHeader title="Contact" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

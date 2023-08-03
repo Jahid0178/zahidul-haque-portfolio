@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 const WorksPage = () => {
   const pathname = usePathname();
   return (
-    <section id="work">
+    <section id="works">
       <div className="container">
         {pathname.slice(1) && <PageHeader title="Works" />}
         <PageHeader title="Latest Works" />

@@ -1,23 +1,5 @@
 * {
-  scroll-behavior: smooth;
-}
-
-body {
-  scrollbar-width: thin;
-}
-
-body::-webkit-scrollbar-track {
-  background: #000;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 3px;
-  border: 1px solid #111223;
-}
-
-body::-webkit-scrollbar {
-  width: 10px;
+  scroll-behavior: smooth !important;
 }
 
 @tailwind base;

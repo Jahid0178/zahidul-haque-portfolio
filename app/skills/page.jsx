@@ -2,7 +2,7 @@ import { skills } from "@/data/data";
 
 const SkillsPage = () => {
   return (
-    <section>
+    <section id="skills">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold">Skills</h2>
         <div className="flex flex-wrap items-center gap-4 mt-8">

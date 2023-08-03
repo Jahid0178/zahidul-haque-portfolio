@@ -26,32 +26,22 @@ export const navigationLinks = [
   {
     id: 1,
     title: "Home",
-    href: "/",
-    delay: 100,
+    href: "#home",
   },
   {
     id: 2,
     title: "About",
-    href: "/about",
-    delay: 200,
+    href: "#about",
   },
   {
     id: 3,
     title: "Works",
-    href: "/works",
-    delay: 300,
+    href: "#works",
   },
   {
     id: 4,
-    title: "Blogs",
-    href: "/blogs",
-    delay: 400,
-  },
-  {
-    id: 5,
     title: "Contact",
-    href: "/contact",
-    delay: 500,
+    href: "#contact",
   },
 ];
 
