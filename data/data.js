@@ -156,7 +156,8 @@ export const projects = [
     title: "GYM Website",
     image: Gym,
     technologies: ["React", "React Bootstrap", "Firebase Authentication"],
-    description: "Update Soon",
+    description:
+      "GYM is a React-based body fitness website with Node.js, MongoDB, React Bootstrap and Firebase authentication. Users create accounts to access the product store, offering gym equipment, apparel, and supplements. Personalized product recommendations enhance user engagement. The platform prioritizes seamless user interaction and a visually appealing interface.",
     liveLink: "https://gym-website-25129.web.app/home",
     gitLink: "https://github.com/Jahid0178/GYM",
   },

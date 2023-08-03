@@ -41,10 +41,12 @@ const AboutPage = () => {
             </div>
             <div>
               <p className="mb-5 text-xl">
-                My name’s Zahidul Haque. I am a web developer based in
-                Bangladesh. I am adept in quite few technologies ie. MERN stack.
-                I try to learn new technologies that pique my interest in my
-                free time & play video games 🎮.
+                Hi there! I'm Zahidul Haque, a passionate and dedicated
+                Front-End Developer based in Bangladesh. With a strong focus on
+                creating seamless user experiences using React, I've spent the
+                past two years immersing myself in the world of web development,
+                constantly honing my skills, and staying up-to-date with the
+                latest industry trends.
               </p>
               <div className="flex flex-col md:flex-row gap-4">
                 <ul>
