@@ -250,4 +250,10 @@ export const awards = [
     title: "Complete Web Development Certificate",
     institute: "Programming Hero",
   },
+  {
+    id: 3,
+    src: "https://i.ibb.co/YdYpcGD/Employment-certificate-zahidul-haque.jpg",
+    title: "Employement Certificate",
+    institute: "Rightbiz",
+  },
 ];

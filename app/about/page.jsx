@@ -12,7 +12,6 @@ import AboutPic from "/public/images/work-from-anywhere.png";
 const AboutPage = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState("");
-  console.log(imgSrc);
 
   return (
     <>
@@ -99,6 +98,7 @@ const AboutPage = () => {
               <div key={skill.id} className="p-4 text-center shadow-md">
                 <Image
                   src={skill.icon}
+                  alt={skill.title}
                   width={50}
                   height={50}
                   className="mx-auto"
@@ -165,6 +165,7 @@ const AboutPage = () => {
                       setOverlayOpen(!overlayOpen);
                       setImgSrc(src);
                     }}
+                    className="max-h-80 object-cover"
                   />
                   <div className="mt-2">
                     <h2 className="text-xl">{title}</h2>
@@ -178,10 +179,16 @@ const AboutPage = () => {
           {overlayOpen && (
             <div
               id="overlay"
-              className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex justify-center items-center h-screen"
+              className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex justify-center items-center h-screen z-50"
               onClick={() => setOverlayOpen(!overlayOpen)}
             >
-              <Image src={imgSrc} alt="Image" width={1000} height={1000} />
+              <Image
+                src={imgSrc}
+                alt="Image"
+                width={1000}
+                height={1000}
+                style={{ height: 800 }}
+              />
             </div>
           )}
         </div>
