@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container">
         <nav className="flex justify-between md:flex-row gap-4 items-center">
           <Logo />
-          <ul className="flex gap-4">
+          <ul className="hidden md:flex gap-4">
             {navigationLinks.map((navigationLink, ind) => {
               const { id, title, href } = navigationLink;
               return (
