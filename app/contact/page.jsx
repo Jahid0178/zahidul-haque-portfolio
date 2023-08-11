@@ -51,7 +51,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact">
+      <section id="contact" className="bg-[#B2CBDE]">
         <div className="container">
           <div className="flex flex-col w-full md:w-2/4 mx-auto gap-4">
             <div>
@@ -61,7 +61,7 @@ const ContactPage = () => {
                 </label>
                 <input
                   id="fullName"
-                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black border-b-2 border"
+                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black border-b-2 border border-black shadow-[-4px_4px_0_0_#111223]"
                   {...register("fullName", { required: true })}
                   type="text"
                   placeholder="Enter your full name"
@@ -71,7 +71,7 @@ const ContactPage = () => {
                 </label>
                 <input
                   id="email"
-                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black border-b-2 border"
+                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black border-b-2 border border-black shadow-[-4px_4px_0_0_#111223]"
                   {...register("email", { required: true })}
                   type="email"
                   placeholder="Enter your email address"
@@ -81,14 +81,17 @@ const ContactPage = () => {
                 </label>
                 <textarea
                   id="message"
-                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black resize-none border-b-2 border"
+                  className="w-full mb-4 px-3 py-2 text-base outline-none rounded-sm text-black resize-none border-b-2 border border-black shadow-[-4px_4px_0_0_#111223]"
                   type="text"
                   {...register("message", { required: true })}
                   placeholder="Enter your message..."
                   rows={5}
                 ></textarea>
                 <div className="text-center">
-                  <input className="btn-primary" type="submit" />
+                  <input
+                    className="btn-primary shadow-[-4px_4px_0_0_#111223]"
+                    type="submit"
+                  />
                 </div>
               </form>
             </div>

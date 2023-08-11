@@ -95,7 +95,10 @@ const AboutPage = () => {
           <PageHeader title="Skills" />
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {skills.map((skill) => (
-              <div key={skill.id} className="p-4 text-center shadow-md">
+              <div
+                key={skill.id}
+                className="p-4 text-center shadow-[-4px_4px_0_0_#111223] hover:shadow-[0_0_0_0_#111223] border border-black rounded-md transition-all  hover:bg-[#b2cbde67]"
+              >
                 <Image
                   src={skill.icon}
                   alt={skill.title}
@@ -127,9 +130,9 @@ const AboutPage = () => {
               return (
                 <div
                   key={id}
-                  className="group relative border border-black p-4 rounded before:absolute before:top-0 before:left-0 before:bottom-0 before:w-0 before:h-full before:hover:w-full before:bg-black before:transition-all before:duration-500 before:ease-in-out"
+                  className="group relative border border-black p-4 rounded before:absolute before:top-0 before:left-0 before:bottom-0 before:w-0 before:h-full before:hover:w-full before:bg-[#B2CBDE] before:transition-all before:duration-500 before:ease-in-out shadow-[-4px_4px_0_0_#111223]"
                 >
-                  <div className="relative group-hover:text-white">
+                  <div className="relative group-hover:text-black">
                     <h2 className="text-2xl font-bold">{name}</h2>
                     <p className="my-2">Roll: {roll}</p>
                     <p className="mb-2">Location: {location}</p>
@@ -155,7 +158,10 @@ const AboutPage = () => {
             {awards.map((award) => {
               const { id, title, src, institute } = award;
               return (
-                <div key={id} className="p-2">
+                <div
+                  key={id}
+                  className="p-2 shadow-[-4px_4px_0_0_#111223] border border-black"
+                >
                   <Image
                     src={src}
                     alt={title}
