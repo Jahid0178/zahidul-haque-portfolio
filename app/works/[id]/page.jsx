@@ -21,7 +21,7 @@ const WorkDetails = ({ params }) => {
   return (
     <section>
       <div className="container">
-        <PageHeader title={title} style={{ fontSize: "5rem" }} />
+        <PageHeader title={title} className="text-left" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <div className="p-1">
             <Image

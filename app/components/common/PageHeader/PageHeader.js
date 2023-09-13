@@ -1,7 +1,12 @@
-const PageHeader = ({ title, ...rest }) => {
+import { usePathname } from "next/navigation";
+
+const PageHeader = ({ title, className, ...rest }) => {
+  const pathname = usePathname();
   return (
     <h2
-      className="text-primary text-4xl md:text-6xl font-bold tracking-widest drop-shadow-lg text-center mb-12"
+      className={`text-primary text-4xl md:text-6xl font-bold tracking-widest drop-shadow-lg ${
+        pathname === "/" && "text-center"
+      } mb-12 ${className}`}
       {...rest}
     >
       {title}
