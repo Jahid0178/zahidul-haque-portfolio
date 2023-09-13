@@ -11,6 +11,8 @@ import Express from "/public/images/skills/express.png";
 import MongoDb from "/public/images/skills/mongodb.png";
 import Redux from "/public/images/skills/redux.png";
 import Tailwind from "/public/images/skills/tailwind.webp";
+import MantineUI from "/public/images/skills/mantine-ui.png";
+import AntDesign from "/public/images/skills/ant-design.png";
 // import GraphQL from "/public/images/skills/graphql.png";
 import MUI from "/public/images/skills/mui.png";
 
@@ -227,12 +229,12 @@ export const skills = [
   },
   {
     id: 11,
-    icon: Tailwind,
+    icon: MantineUI,
     title: "Mantine UI",
   },
   {
     id: 12,
-    icon: Tailwind,
+    icon: AntDesign,
     title: "Ant Design",
   },
 ];
