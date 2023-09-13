@@ -31,7 +31,7 @@ const AboutPage = () => {
               </div>
               <DownloadButton
                 href={
-                  "https://drive.google.com/file/d/1G7xM9T2xh9d6Il3EOuXb6ZD4SmZ0IRFX/view?usp=sharing"
+                  "https://drive.google.com/file/d/1ZSo_z5t2RU4xF_oMs-1abClVe0oG2WF8/view?usp=sharing"
                 }
                 onClick={() => va.track("Download Resume Button")}
               >
