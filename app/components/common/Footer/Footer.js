@@ -9,7 +9,9 @@ const Footer = () => {
     <footer className="py-4 border-t">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} Zahidul Haque. All Right Reserved</p>
+          <p>
+            © {new Date().getFullYear()} AKM Zahidul Haque. All Right Reserved
+          </p>
           <ul className="flex items-center gap-4">
             <li>
               <Link href="#">
