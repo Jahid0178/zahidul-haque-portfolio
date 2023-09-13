@@ -12,7 +12,11 @@ const HomePage = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["MERN Stack Developer", "Front End Developer"],
+      strings: [
+        "React Js Developer",
+        "Next Js Developer",
+        "Front End Developer",
+      ],
       smartBackspace: true,
       typeSpeed: 100,
       loop: true,
@@ -52,10 +56,9 @@ const HomePage = () => {
                 Hello<span className="text-[#FED9CA]">.</span>
               </h4>
               <h1 className="text-2xl md:text-4xl my-4">
-                My name is Zahidul Haque. MERN Stack Developer Front End
-                Focused.
+                My name is AKM Zahidul Haque, <br /> Front End Developer.
               </h1>
-              <span className="text-lg" ref={el}></span>
+              <span className="text-xl" ref={el}></span>
             </div>
             <div className="relative">
               <Image

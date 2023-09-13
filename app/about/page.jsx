@@ -40,7 +40,7 @@ const AboutPage = () => {
             </div>
             <div>
               <p className="mb-5 text-xl">
-                Hi there! I&apos;m Zahidul Haque, a passionate and dedicated
+                Hi there! I&apos;m AKM Zahidul Haque, a passionate and dedicated
                 Front-End Developer based in Bangladesh. With a strong focus on
                 creating seamless user experiences using React, I&apos;ve spent
                 the past two years immersing myself in the world of web
