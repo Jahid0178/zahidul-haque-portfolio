@@ -13,7 +13,7 @@ import Redux from "/public/images/skills/redux.png";
 import Tailwind from "/public/images/skills/tailwind.webp";
 import MantineUI from "/public/images/skills/mantine-ui.png";
 import AntDesign from "/public/images/skills/ant-design.png";
-// import GraphQL from "/public/images/skills/graphql.png";
+import GraphQL from "/public/images/skills/graphql.png";
 import MUI from "/public/images/skills/mui.png";
 
 // Projects Images
@@ -236,6 +236,11 @@ export const skills = [
     id: 12,
     icon: AntDesign,
     title: "Ant Design",
+  },
+  {
+    id: 13,
+    icon: GraphQL,
+    title: "GraphQL",
   },
 ];
 
