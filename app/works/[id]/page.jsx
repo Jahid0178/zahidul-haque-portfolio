@@ -1,14 +1,16 @@
 "use client";
 
-import Button from "@/app/components/Buttons/Button/Button";
-import PageHeader from "@/app/components/common/PageHeader/PageHeader";
+import Button from "@/components/Buttons/Button/Button";
+import PageHeader from "@/components/common/PageHeader/PageHeader";
 import { projects } from "@/data/data";
+import { useEffect, useState } from "react";
+import { useAptabase } from "@aptabase/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const WorkDetails = ({ params }) => {
   const [data, setData] = useState({});
+  const { trackEvent } = useAptabase();
   const { id } = params;
 
   useEffect(() => {
@@ -39,6 +41,12 @@ const WorkDetails = ({ params }) => {
                 className="hover:underline"
                 href={liveLink || ""}
                 target="_blank"
+                onClick={() =>
+                  trackEvent("details_page_live_link", {
+                    title: title,
+                    link: liveLink,
+                  })
+                }
               >
                 Live Link
               </Link>
@@ -46,6 +54,12 @@ const WorkDetails = ({ params }) => {
                 className="hover:underline"
                 href={gitLink || ""}
                 target="_blank"
+                onClick={() =>
+                  trackEvent("details_page_git_link", {
+                    title: title,
+                    link: gitLink,
+                  })
+                }
               >
                 Git Link
               </Link>
@@ -63,7 +77,14 @@ const WorkDetails = ({ params }) => {
                   ))}
                 </ul>
               </div>
-              <Button href="/works">Back To Works Page</Button>
+              <Button
+                href="/works"
+                onClick={() =>
+                  trackEvent("back_to_works_page_btn", { title: title })
+                }
+              >
+                Back To Works Page
+              </Button>
             </div>
           </div>
         </div>

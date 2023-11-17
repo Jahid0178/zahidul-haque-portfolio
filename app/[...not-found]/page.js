@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Buttons/Button/Button";
+import Button from "@/components/Buttons/Button/Button";
 
 const Custom404 = () => {
   return (

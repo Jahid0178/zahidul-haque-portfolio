@@ -1,17 +1,18 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import DownloadButton from "../components/Buttons/DownloadButton/DownloadButton";
+import DownloadButton from "@/components/Buttons/DownloadButton/DownloadButton";
 import Link from "next/link";
 import { awards, comapnyNames, skills } from "@/data/data";
 import Image from "next/image";
-import va from "@vercel/analytics";
-import PageHeader from "../components/common/PageHeader/PageHeader";
+import PageHeader from "@/components/common/PageHeader/PageHeader";
 import AboutPic from "/public/images/work-from-anywhere.png";
+import { useAptabase } from "@aptabase/react";
 
 const AboutPage = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState("");
+  const { trackEvent } = useAptabase();
 
   return (
     <>
@@ -33,7 +34,7 @@ const AboutPage = () => {
                 href={
                   "https://drive.google.com/file/d/1ZSo_z5t2RU4xF_oMs-1abClVe0oG2WF8/view?usp=sharing"
                 }
-                onClick={() => va.track("Download Resume Button")}
+                onClick={() => trackEvent("Download CV")}
               >
                 Download CV
               </DownloadButton>
@@ -170,6 +171,7 @@ const AboutPage = () => {
                     onClick={() => {
                       setOverlayOpen(!overlayOpen);
                       setImgSrc(src);
+                      trackEvent("award_image", { title: title });
                     }}
                     className="max-h-80 object-cover"
                   />

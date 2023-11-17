@@ -1,12 +1,11 @@
-"use strict";
-
-import Footer from "./components/common/Footer/Footer";
-import Header from "./components/common/Header/Header";
+import Footer from "@/components/common/Footer/Footer";
+import Header from "@/components/common/Header/Header";
+import { Ubuntu } from "next/font/google";
+import { Toaster } from "react-hot-toast";
+import { AptabaseProvider } from "@aptabase/react";
 import "swiper/css";
 import "./globals.css";
-import { Ubuntu } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { Toaster } from "react-hot-toast";
+import AptabaseWrapper from "@/providers/AptabaseWrapper";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -25,13 +24,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={ubuntu.className}>
-        <Header />
-        <main className="bg-white text-black">
-          <Toaster />
-          {children}
-          <Analytics />
-        </main>
-        <Footer />
+        <AptabaseWrapper>
+          <Header />
+          <main className="bg-white text-black">
+            <Toaster />
+            {children}
+          </main>
+          <Footer />
+        </AptabaseWrapper>
       </body>
     </html>
   );

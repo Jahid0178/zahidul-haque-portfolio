@@ -5,10 +5,12 @@ import Image from "next/image";
 import selfPicture from "/public/images/photo.png";
 import Typed from "typed.js";
 import { socialLinks } from "@/data/data";
-import IconButton from "../components/Buttons/IconButton/IconButton";
+import IconButton from "@/components/Buttons/IconButton/IconButton";
+import { useAptabase } from "@aptabase/react";
 
 const HomePage = () => {
   const el = useRef(null);
+  const { trackEvent } = useAptabase();
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -37,7 +39,12 @@ const HomePage = () => {
             title={socialLink.title}
             href={socialLink.link}
             type={socialLink.type}
-            onClick={() => console.log("clicked on social link")}
+            onClick={() => {
+              trackEvent("social_link", {
+                title: socialLink.title,
+                link: socialLink.link,
+              });
+            }}
             className="hover:bg-black hover:text-white p-2 rounded-sm"
             target="_blank"
           >

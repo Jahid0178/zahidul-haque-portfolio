@@ -1,8 +1,8 @@
 "use client";
 
-import ProjectCard from "../components/Cards/ProjectCard/ProjectCard";
+import ProjectCard from "@/components/Cards/ProjectCard/ProjectCard";
 import { projects } from "@/data/data";
-import PageHeader from "../components/common/PageHeader/PageHeader";
+import PageHeader from "@/components/common/PageHeader/PageHeader";
 import { usePathname } from "next/navigation";
 import "swiper/css/pagination";
 
