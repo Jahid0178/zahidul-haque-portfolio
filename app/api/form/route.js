@@ -1,4 +1,4 @@
-import { mailOptions, transporter } from "@/app/config/nodemailer";
+import { mailOptions, transporter } from "@/config/nodemailer";
 
 export async function POST(request) {
   const header = new Headers({ "Content-Type": "application/json" });
