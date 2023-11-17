@@ -1,11 +1,13 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import PageHeader from "../components/common/PageHeader/PageHeader";
+import { useAptabase } from "@aptabase/react";
+import PageHeader from "@/components/common/PageHeader/PageHeader";
 
 const ContactPage = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => getFormData(data);
+  const { trackEvent } = useAptabase();
 
   return (
     <>
@@ -91,6 +93,7 @@ const ContactPage = () => {
                   <input
                     className="btn-primary shadow-[-4px_4px_0_0_#111223]"
                     type="submit"
+                    onClick={() => trackEvent("Submit Contact Form")}
                   />
                 </div>
               </form>
