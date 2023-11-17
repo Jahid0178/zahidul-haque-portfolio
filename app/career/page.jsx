@@ -1,5 +1,5 @@
 import { comapnyNames } from "@/data/data";
-import CareerCard from "../components/Cards/CareerCard/CareerCard";
+import CareerCard from "@/components/Cards/CareerCard/CareerCard";
 
 const CareerPage = () => {
   return (
