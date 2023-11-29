@@ -23,6 +23,7 @@ import Agro from "/public/images/projects/agro.png";
 import Gym from "/public/images/projects/gym.png";
 import HacienTequila from "/public/images/projects/hacien.png";
 import HektoFurniture from "/public/images/projects/hekto.png";
+import ReactGalleryImage from "/public/images/projects/react-gallery.png";
 
 export const navigationLinks = [
   {
@@ -173,6 +174,15 @@ export const projects = [
     description: `This is project is furniture buying full-stack website. This project is under development. 🙂`,
     liveLink: "https://hekto-furniture-shop.vercel.app/",
     gitLink: "https://github.com/Jahid0178/Hekto-Furniture-Shop",
+  },
+  {
+    id: 7,
+    title: "React Image Gallery",
+    image: ReactGalleryImage,
+    technologies: ["React", "Tailwind CSS", "DND Kit"],
+    description: `The React Image Gallery is an easy way to organize your pictures. You can move them around by dragging and dropping, select multiple images at once, and delete the ones you don't want. It works on different devices, making it simple to manage your image collection.`,
+    liveLink: "https://react-gallery-image.netlify.app/",
+    gitLink: "https://github.com/Jahid0178/react-gallery-image",
   },
 ];
 
