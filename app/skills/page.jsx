@@ -1,18 +1,28 @@
+"use client";
+
+import Image from "next/image";
+import PageHeader from "@/components/common/PageHeader/PageHeader";
 import { skills } from "@/data/data";
 
 const SkillsPage = () => {
   return (
-    <section id="skills">
+    <section>
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold">Skills</h2>
-        <div className="flex flex-wrap items-center gap-4 mt-8">
+        <PageHeader title="Skills" />
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
           {skills.map((skill) => (
             <div
               key={skill.id}
-              title={skill.title}
-              className="border border-black px-4 py-2 cursor-pointer rounded bg-white hover:bg-black hover:text-white transition-all ease-linear duration-200"
+              className="p-4 text-center shadow-[-4px_4px_0_0_#111223] hover:shadow-[0_0_0_0_#111223] border border-black rounded-md transition-all  hover:bg-[#b2cbde67]"
             >
-              <span data-scroll>{skill.title}</span>
+              <Image
+                src={skill.icon}
+                alt={skill.title}
+                width={50}
+                height={50}
+                className="mx-auto"
+              />
+              <p className="mt-2">{skill.title}</p>
             </div>
           ))}
         </div>

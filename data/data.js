@@ -97,6 +97,16 @@ export const comapnyNames = [
     start: "Feb 2022",
     end: "May 2023",
   },
+  {
+    id: 3,
+    companyName: "DevFirm",
+    roll: "Front End Developer",
+    location: "Dhaka, Bangladesh",
+    jobType: "Full-Time",
+    type: "Hybrid",
+    start: "Jan 2024",
+    end: "Present",
+  },
 ];
 
 export const projects = [

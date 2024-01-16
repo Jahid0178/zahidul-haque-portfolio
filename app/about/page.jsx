@@ -1,16 +1,14 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import DownloadButton from "@/components/Buttons/DownloadButton/DownloadButton";
 import Link from "next/link";
-import { awards, comapnyNames, skills } from "@/data/data";
 import Image from "next/image";
 import PageHeader from "@/components/common/PageHeader/PageHeader";
 import AboutPic from "/public/images/work-from-anywhere.png";
 import { useAptabase } from "@aptabase/react";
 
 const AboutPage = () => {
-  const [overlayOpen, setOverlayOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState("");
   const { trackEvent } = useAptabase();
 
@@ -89,116 +87,6 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <PageHeader title="Skills" />
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            {skills.map((skill) => (
-              <div
-                key={skill.id}
-                className="p-4 text-center shadow-[-4px_4px_0_0_#111223] hover:shadow-[0_0_0_0_#111223] border border-black rounded-md transition-all  hover:bg-[#b2cbde67]"
-              >
-                <Image
-                  src={skill.icon}
-                  alt={skill.title}
-                  width={50}
-                  height={50}
-                  className="mx-auto"
-                />
-                <p className="mt-2">{skill.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <PageHeader title="My Experience" />
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {comapnyNames.map((companyName) => {
-              const {
-                id,
-                companyName: name,
-                roll,
-                location,
-                start,
-                end,
-                jobType,
-                type,
-              } = companyName;
-              return (
-                <div
-                  key={id}
-                  className="group relative border border-black p-4 rounded before:absolute before:top-0 before:left-0 before:bottom-0 before:w-0 before:h-full before:hover:w-full before:bg-[#B2CBDE] before:transition-all before:duration-500 before:ease-in-out shadow-[-4px_4px_0_0_#111223]"
-                >
-                  <div className="relative group-hover:text-black">
-                    <h2 className="text-2xl font-bold">{name}</h2>
-                    <p className="my-2">Roll: {roll}</p>
-                    <p className="mb-2">Location: {location}</p>
-                    <p className="mb-2">
-                      Start: {start} - End: {end}
-                    </p>
-                    <p>
-                      Job Type: {jobType} ({type})
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-right">
-            Awards I&apos;ve earned.
-          </h2>
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {awards.map((award) => {
-              const { id, title, src, institute } = award;
-              return (
-                <div
-                  key={id}
-                  className="p-2 shadow-[-4px_4px_0_0_#111223] border border-black"
-                >
-                  <Image
-                    src={src}
-                    alt={title}
-                    width={500}
-                    height={500}
-                    onClick={() => {
-                      setOverlayOpen(!overlayOpen);
-                      setImgSrc(src);
-                      trackEvent("award_image", { title: title });
-                    }}
-                    className="max-h-80 object-cover"
-                  />
-                  <div className="mt-2">
-                    <h2 className="text-xl">{title}</h2>
-                    <p className="text-lg">{institute}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {overlayOpen && (
-            <div
-              id="overlay"
-              className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex justify-center items-center h-screen z-50"
-              onClick={() => setOverlayOpen(!overlayOpen)}
-            >
-              <Image
-                src={imgSrc}
-                alt="Image"
-                width={1000}
-                height={1000}
-                style={{ height: 800 }}
-              />
-            </div>
-          )}
         </div>
       </section>
     </>
