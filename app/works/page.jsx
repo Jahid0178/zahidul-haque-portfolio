@@ -1,10 +1,10 @@
 "use client";
 
-import ProjectCard from "@/components/Cards/ProjectCard/ProjectCard";
-import { projects } from "@/data/data";
-import PageHeader from "@/components/common/PageHeader/PageHeader";
 import { usePathname } from "next/navigation";
 import "swiper/css/pagination";
+import PageHeader from "../../components/common/PageHeader/PageHeader";
+import ProjectCard from "../../components/Cards/ProjectCard/ProjectCard";
+import { projects } from "../../data/data";
 
 const WorksPage = () => {
   const pathname = usePathname();

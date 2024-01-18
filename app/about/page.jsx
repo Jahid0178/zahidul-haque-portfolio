@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import DownloadButton from "@/components/Buttons/DownloadButton/DownloadButton";
 import Link from "next/link";
 import Image from "next/image";
-import PageHeader from "@/components/common/PageHeader/PageHeader";
 import AboutPic from "/public/images/work-from-anywhere.png";
 import { useAptabase } from "@aptabase/react";
+import DownloadButton from "../../components/Buttons/DownloadButton/DownloadButton";
+import PageHeader from "../../components/common/PageHeader/PageHeader";
 
 const AboutPage = () => {
   const [imgSrc, setImgSrc] = useState("");

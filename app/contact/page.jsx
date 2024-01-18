@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useAptabase } from "@aptabase/react";
-import PageHeader from "@/components/common/PageHeader/PageHeader";
+import PageHeader from "../../components/common/PageHeader/PageHeader";
 
 const ContactPage = () => {
   const { register, handleSubmit } = useForm();

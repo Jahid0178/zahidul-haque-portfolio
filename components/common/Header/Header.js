@@ -3,8 +3,8 @@
 import React from "react";
 import Logo from "./Logo/Logo";
 import Link from "next/link";
-import { navigationLinks } from "@/data/data";
 import { useAptabase } from "@aptabase/react";
+import { navigationLinks } from "../../../data/data";
 
 const Header = () => {
   const { trackEvent } = useAptabase();

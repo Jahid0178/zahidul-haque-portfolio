@@ -1,7 +1,7 @@
 "use client";
 
-import { comapnyNames } from "@/data/data";
-import PageHeader from "@/components/common/PageHeader/PageHeader";
+import { comapnyNames } from "../../data/data";
+import PageHeader from "../../components/common/PageHeader/PageHeader";
 
 const CareerPage = () => {
   return (

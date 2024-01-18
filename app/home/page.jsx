@@ -4,9 +4,9 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import selfPicture from "/public/images/photo.png";
 import Typed from "typed.js";
-import { socialLinks } from "@/data/data";
-import IconButton from "@/components/Buttons/IconButton/IconButton";
 import { useAptabase } from "@aptabase/react";
+import { socialLinks } from "../../data/data";
+import IconButton from "../../components/Buttons/IconButton/IconButton";
 
 const HomePage = () => {
   const el = useRef(null);

@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import PageHeader from "@/components/common/PageHeader/PageHeader";
-import { skills } from "@/data/data";
+import PageHeader from "../../components/common/PageHeader/PageHeader";
+import { skills } from "../../data/data";
 
 const SkillsPage = () => {
   return (

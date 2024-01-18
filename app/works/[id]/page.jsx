@@ -1,12 +1,12 @@
 "use client";
 
-import Button from "@/components/Buttons/Button/Button";
-import PageHeader from "@/components/common/PageHeader/PageHeader";
-import { projects } from "@/data/data";
+import { projects } from "../../../data/data";
 import { useEffect, useState } from "react";
 import { useAptabase } from "@aptabase/react";
 import Image from "next/image";
 import Link from "next/link";
+import PageHeader from "../../../components/common/PageHeader/PageHeader";
+import Button from "../../../components/Buttons/Button/Button";
 
 const WorkDetails = ({ params }) => {
   const [data, setData] = useState({});

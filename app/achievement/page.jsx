@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { awards } from "@/data/data";
+import { awards } from "../../data/data";
 
 const AchievementPage = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
