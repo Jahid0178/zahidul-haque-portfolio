@@ -107,6 +107,16 @@ export const comapnyNames = [
     start: "Jan 2024",
     end: "Present",
   },
+  {
+    id: 4,
+    companyName: "C-Sunshine",
+    roll: "Full Stack Developer",
+    location: "Bratislava, Slovakia",
+    jobType: "Full-Time",
+    type: "Remote",
+    start: "Feb 2024",
+    end: "Present",
+  },
 ];
 
 export const projects = [
