@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  section {
+    @apply py-16 bg-white dark:bg-slate-900;
+  }
+}
