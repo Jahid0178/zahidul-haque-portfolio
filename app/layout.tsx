@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import ThemeProvider from "@/providers/ThemeProvider";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

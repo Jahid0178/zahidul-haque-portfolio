@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 import { Form, FormField } from "./ui/form";
 import { useForm } from "react-hook-form";
 import { Input } from "./ui/input";
@@ -8,6 +10,7 @@ import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 
 const ContactForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const form = useForm({
     defaultValues: {
       fullName: "",
@@ -16,8 +19,23 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = async (data: any) => {
+    if (formRef.current) {
+      const response = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_KEY as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY as string,
+        formRef.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        }
+      );
+      if (response.status === 200) {
+        toast.success("Message sent successfully.");
+        form.reset();
+      } else {
+        toast.error("Failed to send message. Please try again later.");
+      }
+    }
   };
 
   return (
@@ -25,6 +43,7 @@ const ContactForm = () => {
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="max-w-2xl mx-auto rounded-md space-y-4"
+        ref={formRef}
       >
         <FormField
           control={form.control}
