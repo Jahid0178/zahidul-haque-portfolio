@@ -14,10 +14,12 @@ import {
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
 import { MoonIcon, SunIcon } from "lucide-react";
+import { useAptabase } from "@aptabase/react";
 
 const Header = () => {
   const [{ x, y }] = useWindowScroll();
   const { setTheme, theme } = useTheme();
+  const { trackEvent } = useAptabase();
 
   return (
     <header
@@ -34,6 +36,13 @@ const Header = () => {
                 <Link
                   href={navigation.href}
                   className="font-medium hover:text-orange-500"
+                  onClick={() =>
+                    trackEvent("Navigation Button", {
+                      category: "Navigation",
+                      action: "Click",
+                      label: navigation.name,
+                    })
+                  }
                 >
                   {navigation.name}
                 </Link>
@@ -51,13 +60,40 @@ const Header = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
+                <DropdownMenuItem
+                  onClick={() => {
+                    setTheme("light");
+                    trackEvent("Theme Action", {
+                      category: "Theme",
+                      action: "Click",
+                      label: "Light",
+                    });
+                  }}
+                >
                   Light
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                <DropdownMenuItem
+                  onClick={() => {
+                    setTheme("dark");
+                    trackEvent("Theme Action", {
+                      category: "Theme",
+                      action: "Click",
+                      label: "Dark",
+                    });
+                  }}
+                >
                   Dark
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("system")}>
+                <DropdownMenuItem
+                  onClick={() => {
+                    setTheme("system");
+                    trackEvent("Theme Action", {
+                      category: "Theme",
+                      action: "Click",
+                      label: "System",
+                    });
+                  }}
+                >
                   System
                 </DropdownMenuItem>
               </DropdownMenuContent>

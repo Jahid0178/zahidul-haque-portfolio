@@ -18,6 +18,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Badge } from "./ui/badge";
+import Tracker from "./Tracker";
 
 const ProjectCard = ({ project }: any) => {
   return (
@@ -34,26 +35,47 @@ const ProjectCard = ({ project }: any) => {
       <CardContent className="space-y-4">
         <CardTitle>{project.name}</CardTitle>
         <div className="flex justify-between">
-          <Link
-            href={project.links.live}
-            target="_blank"
-            className="hover:underline"
+          <Tracker
+            eventName="Live Link"
+            eventCategory="Button"
+            eventLabel="Project Live Link"
+            eventAction={project.links.live}
           >
-            Live Link
-          </Link>
+            <Link
+              href={project.links.live}
+              target="_blank"
+              className="hover:underline"
+            >
+              Live Link
+            </Link>
+          </Tracker>
 
-          <Link
-            href={project.links.git}
-            target="_blank"
-            className="hover:underline"
+          <Tracker
+            eventName="Git Link"
+            eventCategory="Button"
+            eventLabel="Project Git Link"
+            eventAction={project.links.git}
           >
-            Git Link
-          </Link>
+            <Link
+              href={project.links.git}
+              target="_blank"
+              className="hover:underline"
+            >
+              Git Link
+            </Link>
+          </Tracker>
         </div>
       </CardContent>
       <CardFooter>
         <Dialog>
-          <DialogTrigger>View Details</DialogTrigger>
+          <Tracker
+            eventName="Project View Details"
+            eventCategory="Button"
+            eventLabel={`View Details Button For ${project.name}`}
+            eventAction="Click"
+          >
+            <DialogTrigger>View Details</DialogTrigger>
+          </Tracker>
           <DialogContent>
             <DialogHeader className="space-y-4">
               <Image

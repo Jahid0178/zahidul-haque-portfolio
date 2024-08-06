@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Tracker from "@/components/Tracker";
 
 const HeroSection = () => {
   return (
@@ -22,25 +23,39 @@ const HeroSection = () => {
               responsive designs.
             </p>
             <div className="flex justify-center items-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full"
+              <Tracker
+                eventName="Download CV Button"
+                eventCategory="Button"
+                eventLabel="Download CV"
+                eventAction="Click"
               >
-                <Link
-                  href="https://drive.google.com/file/d/1ZSo_z5t2RU4xF_oMs-1abClVe0oG2WF8/view"
-                  target="_blank"
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-full"
                 >
-                  Download CV
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                className="rounded-full"
-                asChild
+                  <Link
+                    href="https://drive.google.com/file/d/1ZSo_z5t2RU4xF_oMs-1abClVe0oG2WF8/view"
+                    target="_blank"
+                  >
+                    Download CV
+                  </Link>
+                </Button>
+              </Tracker>
+              <Tracker
+                eventName="Hire Me Button"
+                eventCategory="Button"
+                eventLabel="Hire Me"
+                eventAction="Click"
               >
-                <Link href="#contact">Hire Me</Link>
-              </Button>
+                <Button
+                  size="lg"
+                  className="rounded-full"
+                  asChild
+                >
+                  <Link href="#contact">Hire Me</Link>
+                </Button>
+              </Tracker>
             </div>
           </div>
           <div className="relative">

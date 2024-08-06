@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Tracker from "@/components/Tracker";
 
 const AboutSection = () => {
   return (
@@ -29,14 +30,21 @@ const AboutSection = () => {
               keeping up with the latest trends in web development to deliver
               the best results in every project.
             </p>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full"
-              asChild
+            <Tracker
+              eventName="See Work"
+              eventCategory="Button"
+              eventAction="Click"
+              eventLabel="See Work"
             >
-              <Link href="#contact">See Work</Link>
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-full"
+                asChild
+              >
+                <Link href="#contact">See Work</Link>
+              </Button>
+            </Tracker>
           </div>
         </div>
       </div>

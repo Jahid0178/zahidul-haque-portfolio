@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
+import Tracker from "./Tracker";
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -81,13 +82,20 @@ const ContactForm = () => {
             />
           )}
         />
-        <Button
-          type="submit"
-          className="rounded-full"
-          size="lg"
+        <Tracker
+          eventName="Contact Submit Button"
+          eventCategory="Button"
+          eventLabel="Contact Form Submit"
+          eventAction="Click"
         >
-          Send
-        </Button>
+          <Button
+            type="submit"
+            className="rounded-full"
+            size="lg"
+          >
+            Send
+          </Button>
+        </Tracker>
       </form>
     </Form>
   );
