@@ -35,7 +35,7 @@ const HeroSection = () => {
                   className="rounded-full"
                 >
                   <Link
-                    href="https://drive.google.com/file/d/1ZSo_z5t2RU4xF_oMs-1abClVe0oG2WF8/view"
+                    href="https://drive.google.com/file/d/1CPdQKXUTvVZsUtOIOFd4JcwhilaY1-DW/view"
                     target="_blank"
                   >
                     Download CV
