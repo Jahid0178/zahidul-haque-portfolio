@@ -7,6 +7,7 @@ import IconJavascript from "@/components/svg/IconJavascript";
 import IconMantine from "@/components/svg/IconMantine";
 import IconMongodb from "@/components/svg/IconMongodb";
 import IconMui from "@/components/svg/IconMui";
+import IconNext from "@/components/svg/IconNext";
 import IconNode from "@/components/svg/IconNode";
 import IconReact from "@/components/svg/IconReact";
 import IconRedux from "@/components/svg/IconRedux";
@@ -119,6 +120,11 @@ export const skills: {
     id: 13,
     title: "GraphQL",
     icon: IconGraphql,
+  },
+  {
+    id: 14,
+    title: "NextJs",
+    icon: IconNext,
   },
 ];
 
