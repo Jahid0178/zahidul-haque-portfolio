@@ -1,10 +1,13 @@
 import React from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import Tracker from "@/components/Tracker";
+import { Button } from "@/components/ui/button";
+import { getHeroPage } from "@/sanity/sanity-utils";
 
-const HeroSection = () => {
+const HeroSection = async () => {
+  const heroPageContent = await getHeroPage();
+  const { title, subtitle, description } = heroPageContent[0];
   return (
     <section
       className="bg-gradient-to-b from-white to-orange-200 dark:from-slate-900 dark:to-black relative pt-40"
@@ -13,15 +16,9 @@ const HeroSection = () => {
       <div className="container">
         <div>
           <div className="text-center space-y-4 max-w-lg mx-auto">
-            <h1 className="text-3xl md:text-5xl font-bold">
-              AKM Zahidul Haque
-            </h1>
-            <p className="text-2xl font-medium">I&apos;m Front End Developer</p>
-            <p className="text-gray-600">
-              I&apos;m a Front-End Developer with over 3 years of experience,
-              specializing in crafting seamless user experiences and modern,
-              responsive designs.
-            </p>
+            <h1 className="text-3xl md:text-5xl font-bold">{title}</h1>
+            <p className="text-2xl font-medium">{subtitle}</p>
+            <p className="text-gray-600">{description}</p>
             <div className="flex justify-center items-center gap-4">
               <Tracker
                 eventName="Download CV Button"
