@@ -31,3 +31,16 @@ export async function getSkillsPage() {
       "icon": icon.asset->url,
     }`);
 }
+
+export async function getWorkExperience() {
+  return await client.fetch(`*[_type == "experience"]{
+      _id,
+      company,
+      role,
+      location,
+      startDate,
+      endDate,
+      jobType,
+      "slug": slug.current,
+    }`);
+}
