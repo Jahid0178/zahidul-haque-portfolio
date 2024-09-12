@@ -1,9 +1,7 @@
 import React from "react";
-import SectionHeading from "@/components/SectionHeading";
-import { skills } from "@/data/data";
-import Icon from "@/components/Icon";
-import { getSkillsPage } from "@/sanity/sanity-utils";
 import Image from "next/image";
+import SectionHeading from "@/components/SectionHeading";
+import { getSkillsPage } from "@/sanity/sanity-utils";
 
 const SkillsSection = async () => {
   const skillsPageContent = await getSkillsPage();
