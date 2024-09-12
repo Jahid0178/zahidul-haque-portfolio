@@ -2,8 +2,10 @@ import React from "react";
 import SectionHeading from "@/components/SectionHeading";
 import ExperienceCard from "@/components/ExperienceCard";
 import { experiences } from "@/data/data";
+import { getWorkExperience } from "@/sanity/sanity-utils";
 
-const ExperienceSection = () => {
+const ExperienceSection = async () => {
+  const worksExperiences = await getWorkExperience();
   return (
     <section id="experience">
       <div className="container">
@@ -12,9 +14,9 @@ const ExperienceSection = () => {
           subtitle={"Journey Through My Career Milestones"}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {experiences.map((experience) => (
+          {worksExperiences.map((experience: any) => (
             <ExperienceCard
-              key={experience.id}
+              key={experience._id}
               data={experience}
             />
           ))}
