@@ -3,8 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Tracker from "@/components/Tracker";
+import { getAboutPage } from "@/sanity/sanity-utils";
 
-const AboutSection = () => {
+const AboutSection = async () => {
+  const aboutPageContent = await getAboutPage();
+  const { title, description } = aboutPageContent[0];
   return (
     <section id="about">
       <div className="container">
@@ -20,16 +23,9 @@ const AboutSection = () => {
           </div>
           <div className="lg:col-span-7 space-y-4">
             <h2 className="md:text-2xl text-xl md:leading-normal leading-normal font-semibold">
-              I&apos;m a Passionate Web Developer
+              {title}
             </h2>
-            <p className="text-slate-400 max-w-xl text-base">
-              Hi there! I&apos;m AKM Zahidul Haque, a passionate and dedicated
-              Front-End Developer from Bangladesh. For the past three years,
-              I&apos;ve been focused on building smooth and engaging user
-              experiences with React. I&apos;m always improving my skills and
-              keeping up with the latest trends in web development to deliver
-              the best results in every project.
-            </p>
+            <p className="text-slate-400 max-w-xl text-base">{description}</p>
             <Tracker
               eventName="See Work"
               eventCategory="Button"
