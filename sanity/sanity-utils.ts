@@ -22,3 +22,12 @@ export async function getAboutPage() {
     description,
   }`);
 }
+
+export async function getSkillsPage() {
+  return await client.fetch(`*[_type == "skills"]{
+      _id,
+      title,
+      "slug": slug.current,
+      "icon": icon.asset->url,
+    }`);
+}

@@ -1,11 +1,10 @@
-"use client";
-
 import React from "react";
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
-import { skills } from "@/data/data";
-import Icon from "@/components/Icon";
+import { getSkillsPage } from "@/sanity/sanity-utils";
 
-const SkillsSection = () => {
+const SkillsSection = async () => {
+  const skillsPageContent = await getSkillsPage();
   return (
     <section
       className="bg-gray-50"
@@ -17,19 +16,26 @@ const SkillsSection = () => {
           subtitle={"Highlighting My Technical Proficiencies"}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {skills.map((skill: any) => {
-            return (
-              <div
-                key={skill.id}
-                className="flex gap-2 items-center p-4 shadow-lg group rounded-md bg-white dark:bg-slate-800/50 cursor-pointer"
-              >
-                <div className="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
-                  <div className="rotate-45">{skill.icon()}</div>
+          {skillsPageContent.map(
+            (skill: { title: string; icon: string; slug: string }) => {
+              return (
+                <div
+                  key={skill.slug}
+                  className="flex gap-2 items-center p-4 shadow-lg group rounded-md bg-white dark:bg-slate-800/50 cursor-pointer"
+                >
+                  <div className="flex items-center justify-center h-[45px] min-w-[45px] ">
+                    <Image
+                      src={skill.icon}
+                      alt={skill.slug}
+                      width={45}
+                      height={45}
+                    />
+                  </div>
+                  <div>{skill.title}</div>
                 </div>
-                <div>{skill.title}</div>
-              </div>
-            );
-          })}
+              );
+            }
+          )}
         </div>
       </div>
     </section>
